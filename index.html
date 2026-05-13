@@ -7,7 +7,7 @@
 <meta name="description" content="Premium mobile car wash and detailing in Bahrain. We drive to you — home, office, anywhere. Silver, Golden & Super VIP packages. Book on WhatsApp.">
 <meta property="og:title" content="Excellent Car Wash — Mobile Detailing · Bahrain">
 <meta property="og:description" content="We drive to you. Steam-powered mobile car wash across all of Bahrain.">
-<meta property="og:image" content="brand_assets/IMG_3818.jpg">
+<meta property="og:image" content="brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg">
 
 <script type="application/ld+json">
 {
@@ -203,7 +203,7 @@ body{
 /* Full-bleed van photo */
 .hero-photo{
   position:absolute;inset:0;
-  background:url('brand_assets/IMG_3822.jpg') right center / auto 100% no-repeat;
+  background:url('brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg') right center / auto 100% no-repeat;
 }
 .hero-photo::after{
   content:'';position:absolute;inset:0;
@@ -212,7 +212,7 @@ body{
     linear-gradient(to top, #0C0C0C 0%, transparent 28%);
 }
 @media(max-width:819px){
-  .hero-photo{background:url('brand_assets/IMG_3822.jpg') center top / cover no-repeat}
+  .hero-photo{background:url('brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg') center top / cover no-repeat}
   .hero-photo::after{
     background:linear-gradient(to bottom, rgba(12,12,12,.55) 0%, rgba(12,12,12,.82) 50%, #0C0C0C 75%);
   }
@@ -294,7 +294,8 @@ body{
 .services-section{background:#0C0C0C;padding:88px 24px}
 .services-inner{max-width:1200px;margin:0 auto}
 .tier-grid{display:grid;grid-template-columns:1fr;gap:2px;background:#222}
-@media(min-width:700px){.tier-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:700px){.tier-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.tier-grid{grid-template-columns:repeat(3,1fr)}}
 .tier-card{
   background:#141414;padding:0;overflow:hidden;
   display:flex;flex-direction:column;
@@ -352,6 +353,78 @@ body{
 .tier-golden .tier-book-btn:hover{background:rgba(212,175,55,.2)}
 .tier-vip .tier-book-btn{background:#E31837;color:#fff}
 .tier-vip .tier-book-btn:hover{background:#B80E2C}
+
+/* ── New tier color variants ─────────────────────────────── */
+.tier-steam .tier-color-bar{background:linear-gradient(to right,#2a6a8a,#4BA3C3,#2a6a8a)}
+.tier-steam .tier-name-text{color:#4BA3C3}
+.tier-steam .feat-bullet{background:rgba(75,163,195,.12);color:#4BA3C3}
+.tier-steam .tier-book-btn{background:rgba(75,163,195,.1);color:#4BA3C3;border:1px solid rgba(75,163,195,.25)}
+.tier-steam .tier-book-btn:hover{background:rgba(75,163,195,.2)}
+.tier-machine-vip .tier-color-bar{background:linear-gradient(to right,#6b1010,#C0392B,#6b1010)}
+.tier-machine-vip .tier-name-text{color:#C0392B}
+.tier-machine-vip .feat-bullet{background:rgba(192,57,43,.12);color:#C0392B}
+.tier-machine-vip .tier-book-btn{background:rgba(192,57,43,.1);color:#C0392B;border:1px solid rgba(192,57,43,.25)}
+.tier-machine-vip .tier-book-btn:hover{background:rgba(192,57,43,.2)}
+.tier-glow .tier-color-bar{background:linear-gradient(to right,#1a5c3a,#2E8B57,#1a5c3a)}
+.tier-glow .tier-name-text{color:#2E8B57}
+.tier-glow .feat-bullet{background:rgba(46,139,87,.12);color:#2E8B57}
+.tier-glow .tier-book-btn{background:rgba(46,139,87,.1);color:#2E8B57;border:1px solid rgba(46,139,87,.25)}
+.tier-glow .tier-book-btn:hover{background:rgba(46,139,87,.2)}
+
+/* ── Monthly Packages (dark) ─────────────────────────────── */
+.monthly-section{background:#0C0C0C;padding:88px 24px;border-top:1px solid #222}
+.monthly-inner{max-width:1200px;margin:0 auto}
+.monthly-layout{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+@media(min-width:900px){.monthly-layout{grid-template-columns:1fr 1fr}}
+.monthly-visual{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.monthly-visual img{width:100%;display:block}
+.monthly-tables{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:500px){.monthly-tables{grid-template-columns:1fr 1fr}}
+.monthly-table{background:#141414;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.monthly-table-head{background:#E31837;padding:12px 16px;display:flex;align-items:center;gap:8px}
+.monthly-table-icon{font-size:1.1rem}
+.monthly-table-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;font-size:1rem;color:#fff;letter-spacing:.04em}
+.ar-mode .monthly-table-label{font-style:normal;font-family:'Cairo',sans-serif !important;letter-spacing:0}
+.monthly-row{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.monthly-row:last-child{border-bottom:none}
+.monthly-visits{font-size:.83rem;color:#888;font-weight:500}
+.monthly-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:1.25rem;color:#fff}
+.ar-mode .monthly-price{font-style:normal;font-family:'Cairo',sans-serif !important}
+.monthly-addons{background:#141414;border-radius:8px;border:1px solid rgba(255,255,255,.08);padding:16px;margin-top:4px}
+.monthly-addon-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#555;margin-bottom:10px}
+.ar-mode .monthly-addon-title{letter-spacing:0}
+.monthly-addon-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.monthly-addon-row:last-child{border-bottom:none}
+.monthly-addon-name{font-size:.83rem;color:#888}
+.monthly-addon-price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:1rem;color:#E31837}
+.ar-mode .monthly-addon-price{font-style:normal;font-family:'Cairo',sans-serif !important}
+
+/* ── Testimonials (dark) ──────────────────────────────────── */
+.testimonials-section{background:#0C0C0C;padding:88px 24px;border-top:1px solid #222}
+.testimonials-inner{max-width:1200px;margin:0 auto}
+.testimonials-layout{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+@media(min-width:900px){.testimonials-layout{grid-template-columns:300px 1fr}}
+.testimonials-graphic{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);display:none}
+@media(min-width:900px){.testimonials-graphic{display:block}}
+.testimonials-graphic img{width:100%;display:block}
+.testimonials-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.testimonial-card{background:#141414;border-radius:8px;padding:24px;border:1px solid rgba(255,255,255,.07);border-left:3px solid #E31837;transition:background .2s}
+[dir="rtl"] .testimonial-card{border-left:none;border-right:3px solid #E31837}
+.testimonial-card:hover{background:#1a1a1a}
+.stars{display:flex;gap:3px;margin-bottom:12px}
+.star{color:#F5C842;font-size:1rem}
+.testimonial-text{font-size:.88rem;line-height:1.75;color:#aaa;margin:0 0 14px;font-style:italic}
+.ar-mode .testimonial-text{font-style:normal;font-family:'Cairo',sans-serif !important;font-size:.92rem}
+.testimonial-time{font-size:.72rem;color:#444;font-weight:600}
+
+/* ── Results gallery grid ─────────────────────────────────── */
+.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:640px){.ba-grid{grid-template-columns:repeat(3,1fr)}}
+.ba-grid-item{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08);aspect-ratio:1/1}
+.ba-grid-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ba-grid-item:hover img{transform:scale(1.04)}
+.ba-grid-item.wide{grid-column:span 2}
+@media(min-width:640px){.ba-grid-item.wide{grid-column:span 1}}
 
 /* ── Extras (light) ──────────────────────────────────────── */
 .extras-section{background:#F2EEE8;padding:88px 24px}
@@ -639,7 +712,7 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
       <!-- SILVER -->
       <div class="tier-card tier-silver reveal">
         <div class="tier-img-wrap">
-          <img src="brand_assets/IMG_3814.jpg" alt="Silver foam washing service" loading="lazy">
+          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.47.jpeg" alt="Silver foam washing service" loading="lazy">
         </div>
         <div class="tier-color-bar"></div>
         <div class="tier-body">
@@ -669,7 +742,7 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
       <!-- GOLDEN -->
       <div class="tier-card tier-golden reveal" style="transition-delay:.1s">
         <div class="tier-img-wrap">
-          <img src="brand_assets/IMG_3815.jpg" alt="Golden hand polishing service" loading="lazy">
+          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50.jpeg" alt="Golden hand polishing service" loading="lazy">
         </div>
         <div class="tier-color-bar"></div>
         <div class="tier-body">
@@ -700,7 +773,7 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
       <!-- SUPER VIP -->
       <div class="tier-card tier-vip reveal" style="transition-delay:.2s">
         <div class="tier-img-wrap">
-          <img src="brand_assets/IMG_3816.jpg" alt="Super VIP comprehensive detailing service" loading="lazy">
+          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.48 (4).jpeg" alt="Super VIP comprehensive detailing service" loading="lazy">
         </div>
         <div class="tier-color-bar"></div>
         <div class="tier-body">
@@ -732,6 +805,162 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
         </div>
       </div>
 
+      <!-- STEAM WASHING -->
+      <div class="tier-card tier-steam reveal" style="transition-delay:.1s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.49 (3).jpeg" alt="Steam washing package" loading="lazy">
+        </div>
+        <div class="tier-color-bar"></div>
+        <div class="tier-body">
+          <p class="tier-name-text" data-i18n="steam-name">Steam Wash</p>
+          <p class="tier-sub-text" data-i18n="steam-sub">Steam Washing Package</p>
+          <div class="tier-pricing">
+            <div class="price-block">
+              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
+              <span class="price-val">BD 10</span>
+            </div>
+            <div class="price-block">
+              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
+              <span class="price-val">BD 13</span>
+            </div>
+          </div>
+          <ul class="feat-list" role="list">
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f1">Exterior car wash with wet steam</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f2">Interior dry steam cleaning</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f3">AC vent sterilization with steam</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f4">Spray waxing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f5">Car perfume</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f6">Tire &amp; wheel cleaning and polish</span></li>
+            <li class="feat" style="color:#666;font-size:.78rem"><span class="feat-bullet" style="background:rgba(75,163,195,.08);color:#3a7a96"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-addon">Add-on: Engine steam cleaning +BD 5</span></li>
+          </ul>
+          <a id="steamCta" href="https://wa.me/97338898886?text=Steam+Washing+package+booking" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+      <!-- MACHINE EXTERIOR POLISHING VIP -->
+      <div class="tier-card tier-machine-vip reveal" style="transition-delay:.2s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.48 (3).jpeg" alt="Machine exterior polishing VIP service" loading="lazy">
+        </div>
+        <div class="tier-color-bar"></div>
+        <div class="tier-body">
+          <p class="tier-name-text" data-i18n="machine-vip-name">Machine VIP</p>
+          <p class="tier-sub-text" data-i18n="machine-vip-sub">Machine Exterior Polishing</p>
+          <div class="tier-pricing">
+            <div class="price-block">
+              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
+              <span class="price-val">BD 20</span>
+            </div>
+            <div class="price-block">
+              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
+              <span class="price-val">BD 25</span>
+            </div>
+          </div>
+          <ul class="feat-list" role="list">
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f1">Foam car wash</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f2">Interior vacuuming &amp; cleaning</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f3">Gentle machine polishing of exterior</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f4">Plastic trim polishing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f5">Waxing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f6">Car deodorizing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f7">Tire polishing</span></li>
+          </ul>
+          <a id="machineVipCta" href="https://wa.me/97338898886?text=Machine+VIP+polishing+booking" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+      <!-- GLOW PACKAGE -->
+      <div class="tier-card tier-glow reveal" style="transition-delay:.3s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.49 (1).jpeg" alt="Glow package comprehensive polishing" loading="lazy">
+        </div>
+        <div class="tier-color-bar"></div>
+        <div class="tier-body">
+          <p class="tier-name-text" data-i18n="glow-name">Glow</p>
+          <p class="tier-sub-text" data-i18n="glow-sub">Comprehensive Polish Package</p>
+          <div class="tier-pricing">
+            <div class="price-block">
+              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
+              <span class="price-val">BD 30</span>
+            </div>
+            <div class="price-block">
+              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
+              <span class="price-val">BD 40</span>
+            </div>
+          </div>
+          <ul class="feat-list" role="list">
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f1">Exterior wash with foam or steam</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f2">Coarse polish &amp; scratch removal</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f3">Fine polishing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f4">Spray waxing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f5">Headlight polishing</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f6">Glass cleaning with special materials</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f7">Tire &amp; wheel cleaning and polish</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f8">Dashboard vacuuming &amp; cleaning</span></li>
+            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f9">Car fragrance</span></li>
+            <li class="feat" style="color:#666;font-size:.78rem"><span class="feat-bullet" style="background:rgba(46,139,87,.08);color:#226644"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-addon">Add-on: Engine cleaning +BD 5</span></li>
+          </ul>
+          <a id="glowCta" href="https://wa.me/97338898886?text=Glow+package+booking" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MONTHLY PACKAGES ══════════════════════════════════════ -->
+<section class="monthly-section" id="monthly">
+  <div class="monthly-inner">
+    <div class="reveal" style="margin-bottom:40px">
+      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="monthly-eyebrow">Save More</span></div>
+      <h2 class="d-title" style="color:#fff" data-i18n="monthly-title">MONTHLY PACKAGES</h2>
+      <p style="font-size:.9rem;color:#666;max-width:480px;margin-top:10px;line-height:1.65" data-i18n="monthly-lede">Subscribe monthly and save. Choose your visit count — we handle the rest.</p>
+    </div>
+    <div class="monthly-layout">
+      <div class="monthly-visual reveal">
+        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.47 (4).jpeg" alt="Excellent Car Wash Hyundai Staria mobile van — monthly subscription packages" loading="lazy">
+      </div>
+      <div class="reveal" style="transition-delay:.12s">
+        <div class="monthly-tables">
+          <div class="monthly-table">
+            <div class="monthly-table-head">
+              <span class="monthly-table-icon">🚗</span>
+              <span class="monthly-table-label" data-i18n="monthly-sedan-label">Sedan</span>
+            </div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v4">4 Visits</span><span class="monthly-price">BD 24</span></div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v6">6 Visits</span><span class="monthly-price">BD 30</span></div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v8">8 Visits</span><span class="monthly-price">BD 36</span></div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v12">12 Visits</span><span class="monthly-price">BD 42</span></div>
+          </div>
+          <div class="monthly-table">
+            <div class="monthly-table-head">
+              <span class="monthly-table-icon">🚙</span>
+              <span class="monthly-table-label" data-i18n="monthly-jeep-label">SUV / Jeep</span>
+            </div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v4">4 Visits</span><span class="monthly-price">BD 30</span></div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v6">6 Visits</span><span class="monthly-price">BD 36</span></div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v8">8 Visits</span><span class="monthly-price">BD 42</span></div>
+            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v12">12 Visits</span><span class="monthly-price">BD 50</span></div>
+          </div>
+        </div>
+        <div class="monthly-addons" style="margin-top:16px">
+          <div class="monthly-addon-title" data-i18n="monthly-addons-title">Optional Add-ons</div>
+          <div class="monthly-addon-row">
+            <span class="monthly-addon-name" data-i18n="monthly-addon-machine">Machine polish upgrade</span>
+            <span class="monthly-addon-price">+BD 10</span>
+          </div>
+          <div class="monthly-addon-row">
+            <span class="monthly-addon-name" data-i18n="monthly-addon-hand">Hand wax upgrade</span>
+            <span class="monthly-addon-price">+BD 5</span>
+          </div>
+        </div>
+        <div style="margin-top:24px">
+          <a id="monthlyCta" href="https://wa.me/97338898886?text=Monthly+subscription+enquiry" class="btn btn-red" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.554 4.107 1.523 5.827L.057 23.854a.5.5 0 0 0 .608.61l6.174-1.618A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.52-5.168-1.424l-.369-.22-3.825 1.003 1.018-3.71-.242-.384A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <span data-i18n="monthly-cta">Subscribe Monthly</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -774,8 +1003,52 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
       <h2 class="d-title" style="color:#fff" data-i18n="res-title">BEFORE &amp; AFTER</h2>
       <p style="font-size:.9rem;color:#555;max-width:480px;margin-top:10px;line-height:1.65" data-i18n="res-lede">Engine bays, paint correction, interior restoration — we transform every vehicle we touch.</p>
     </div>
-    <div class="ba-frame reveal">
-      <img src="brand_assets/IMG_3817.jpg" alt="BMW engine bay before and after Excellent Car Wash detailing" loading="lazy">
+    <div class="ba-grid reveal">
+      <div class="ba-grid-item wide">
+        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg" alt="BMW engine bay before and after — Excellent Car Wash" loading="lazy">
+      </div>
+      <div class="ba-grid-item">
+        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (2).jpeg" alt="Interior seats before and after cleaning" loading="lazy">
+      </div>
+      <div class="ba-grid-item">
+        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (3).jpeg" alt="Headlight restoration before and after" loading="lazy">
+      </div>
+      <div class="ba-grid-item">
+        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (4).jpeg" alt="Interior seats deep clean before and after" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="reveal" style="margin-bottom:40px">
+      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="testi-eyebrow">Real Customers</span></div>
+      <h2 class="d-title" style="color:#fff" data-i18n="testi-title">WHAT THEY SAY</h2>
+      <p style="font-size:.85rem;color:#555;margin-top:8px" data-i18n="testi-sub">Real customer messages — Bahrain</p>
+    </div>
+    <div class="testimonials-layout">
+      <div class="testimonials-graphic">
+        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (1).jpeg" alt="Customer testimonials for Excellent Car Wash Bahrain" loading="lazy">
+      </div>
+      <div class="testimonials-grid reveal" style="transition-delay:.1s">
+        <div class="testimonial-card">
+          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testimonial-text" lang="ar" dir="rtl">"ماشاءالله السيارة ولا أروع نظافة وريحة جميلة يعطيكم ألف عافيه ودايما اختار اكسيلنت كار واش 👌"</p>
+          <span class="testimonial-time">WhatsApp · 7:04 PM</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testimonial-text" lang="ar" dir="rtl">"ماشاءالله بدعتو السياره تبارك الله رجعت وكاله"</p>
+          <span class="testimonial-time">WhatsApp · 6:17 PM</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testimonial-text" lang="ar" dir="rtl">"ماشاءالله وايد شغلكم نظيف و بروفشنل و السياره واايد نظيفه وحتى الريحه داخل السياره ممتازه، سوويت لكم دعاية خفيفه بعد ومب اخر تعامل ان شاء الله"</p>
+          <span class="testimonial-time">WhatsApp · 9:25 PM</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -904,7 +1177,7 @@ const STRINGS = {
     'why-1-t':'We Come to You','why-1-d':'Home, office, or compound — our van arrives at your location. No driving, no waiting.',
     'why-2-t':'Steam Technology','why-2-d':'Professional steam equipment removes dirt, bacteria, and grime without excess water waste.',
     'why-3-t':'Trained Team','why-3-d':'Every detail handled by trained professionals using premium products only.',
-    'svc-eyebrow':'Our Packages','svc-title':'CHOOSE YOUR DETAIL','svc-lede':'Three tiers. One mission: leave your car spotless.',
+    'svc-eyebrow':'Our Packages','svc-title':'CHOOSE YOUR DETAIL','svc-lede':'Six packages. One mission: leave your car spotless.',
     'silver-name':'Silver','silver-sub':'Foam Washing',
     'silver-f1':'Foam car wash','silver-f2':'Interior vacuuming & cleaning','silver-f3':'Tire & wheel cleaning and polish','silver-f4':'Waxing','silver-f5':'Car deodorizing',
     'golden-name':'Golden','golden-sub':'Quick Hand Polishing',
@@ -912,6 +1185,18 @@ const STRINGS = {
     'vip-name':'Super VIP','vip-sub':'Comprehensive Detailing',
     'vip-f1':'Exterior wash with foam or steam','vip-f2':'Interior cleaning with specialized products & stain removal','vip-f3':'Plastic trim polishing','vip-f4':'Heavy scratch removal polishing','vip-f5':'Medium polishing','vip-f6':'Fine polishing','vip-f7':'Waxing','vip-f8':'Tire polishing','vip-f9':'Car deodorizing','vip-f10':'AC vent & steam sterilization',
     'svc-sedan':'Sedan','svc-suv':'SUV / Jeep','btn-book':'Book This Package',
+    'steam-name':'Steam Wash','steam-sub':'Steam Washing Package',
+    'steam-f1':'Exterior car wash with wet steam','steam-f2':'Interior dry steam cleaning','steam-f3':'AC vent sterilization with steam','steam-f4':'Spray waxing','steam-f5':'Car perfume','steam-f6':'Tire & wheel cleaning and polish','steam-addon':'Add-on: Engine steam cleaning +BD 5',
+    'machine-vip-name':'Machine VIP','machine-vip-sub':'Machine Exterior Polishing',
+    'machine-vip-f1':'Foam car wash','machine-vip-f2':'Interior vacuuming & cleaning','machine-vip-f3':'Gentle machine polishing of exterior','machine-vip-f4':'Plastic trim polishing','machine-vip-f5':'Waxing','machine-vip-f6':'Car deodorizing','machine-vip-f7':'Tire polishing',
+    'glow-name':'Glow','glow-sub':'Comprehensive Polish Package',
+    'glow-f1':'Exterior wash with foam or steam','glow-f2':'Coarse polish & scratch removal','glow-f3':'Fine polishing','glow-f4':'Spray waxing','glow-f5':'Headlight polishing','glow-f6':'Glass cleaning with special materials','glow-f7':'Tire & wheel cleaning and polish','glow-f8':'Dashboard vacuuming & cleaning','glow-f9':'Car fragrance','glow-addon':'Add-on: Engine cleaning +BD 5',
+    'monthly-eyebrow':'Save More','monthly-title':'MONTHLY PACKAGES','monthly-lede':'Subscribe monthly and save. Choose your visit count — we handle the rest.',
+    'monthly-sedan-label':'Sedan','monthly-jeep-label':'SUV / Jeep',
+    'monthly-v4':'4 Visits','monthly-v6':'6 Visits','monthly-v8':'8 Visits','monthly-v12':'12 Visits',
+    'monthly-addons-title':'Optional Add-ons','monthly-addon-machine':'Machine polish upgrade','monthly-addon-hand':'Hand wax upgrade',
+    'monthly-cta':'Subscribe Monthly',
+    'testi-eyebrow':'Real Customers','testi-title':'WHAT THEY SAY','testi-sub':'Real customer messages — Bahrain',
     'ext-eyebrow':'Also Available','ext-title':'BEYOND CARS',
     'ext-bike-t':'Bike Wash','ext-bike-d':'Full wash and detail for motorcycles and bikes.',
     'ext-boat-t':'Boat Wash','ext-boat-d':'Marine detailing and cleaning service.',
@@ -941,7 +1226,7 @@ const STRINGS = {
     'why-1-t':'نجي لك','why-1-d':'بيت، دوام، أو مجمع — سيارتنا توصل لموقعك. بدون قيادة، بدون انتظار.',
     'why-2-t':'تقنية البخار','why-2-d':'معدات بخار احترافية تزيل الأوساخ والبكتيريا بدون هدر ماء.',
     'why-3-t':'فريق متخصص','why-3-d':'كل تفصيلة بيد محترفين مدربين باستخدام منتجات ممتازة فقط.',
-    'svc-eyebrow':'باقاتنا','svc-title':'اختر باقتك','svc-lede':'ثلاث باقات. هدف واحد: سيارتك تطلع نظيفة.',
+    'svc-eyebrow':'باقاتنا','svc-title':'اختر باقتك','svc-lede':'ست باقات. هدف واحد: سيارتك تطلع نظيفة.',
     'silver-name':'الفضي','silver-sub':'غسيل بالفوم',
     'silver-f1':'غسيل بالفوم','silver-f2':'شفط وتنظيف المقصورة الداخلية','silver-f3':'تنظيف وتلميع الإطارات والجنوط','silver-f4':'وكسنج','silver-f5':'تعطير السيارة',
     'golden-name':'الذهبي','golden-sub':'تلميع يدوي سريع',
@@ -949,6 +1234,18 @@ const STRINGS = {
     'vip-name':'سوبر في آي بي','vip-sub':'تفصيل شامل',
     'vip-f1':'غسيل خارجي بالفوم أو البخار','vip-f2':'تنظيف داخلي بمنتجات متخصصة وإزالة البقع','vip-f3':'تلميع البلاستيك','vip-f4':'إزالة الخدوش الكبيرة','vip-f5':'تلميع متوسط','vip-f6':'تلميع ناعم','vip-f7':'وكسنج','vip-f8':'تلميع الإطارات','vip-f9':'تعطير السيارة','vip-f10':'تعقيم فتحات التكييف بالبخار',
     'svc-sedan':'سيدان','svc-suv':'جيب / SUV','btn-book':'احجز الباقة',
+    'steam-name':'غسيل بالبخار','steam-sub':'باقة الغسيل بالبخار',
+    'steam-f1':'غسيل خارجي بالبخار الرطب','steam-f2':'تنظيف داخلي بالبخار الجاف','steam-f3':'تعقيم فتحات التكييف بالبخار','steam-f4':'وكسنج بالرش','steam-f5':'تعطير السيارة','steam-f6':'تنظيف وتلميع الإطارات والجنوط','steam-addon':'إضافة: تنظيف المحرك بالبخار +٥ دينار',
+    'machine-vip-name':'تلميع VIP','machine-vip-sub':'تلميع خارجي بالمكينة',
+    'machine-vip-f1':'غسيل بالفوم','machine-vip-f2':'شفط وتنظيف المقصورة الداخلية','machine-vip-f3':'تلميع ناعم بالمكينة للجسم الخارجي','machine-vip-f4':'تلميع البلاستيك','machine-vip-f5':'وكسنج','machine-vip-f6':'تعطير السيارة','machine-vip-f7':'تلميع الإطارات',
+    'glow-name':'جلو','glow-sub':'باقة تلميع شاملة',
+    'glow-f1':'غسيل خارجي بالفوم أو البخار','glow-f2':'تلميع خشن وإزالة الخدوش','glow-f3':'تلميع ناعم','glow-f4':'وكسنج بالرش','glow-f5':'تلميع المصابيح','glow-f6':'تنظيف الزجاج بمواد متخصصة','glow-f7':'تنظيف وتلميع الإطارات والجنوط','glow-f8':'شفط وتنظيف لوحة القيادة','glow-f9':'عطر السيارة','glow-addon':'إضافة: تنظيف المحرك +٥ دينار',
+    'monthly-eyebrow':'وفر أكثر','monthly-title':'الباقات الشهرية','monthly-lede':'اشترك شهرياً ووفر. اختر عدد الزيارات — نحن نتولى الباقي.',
+    'monthly-sedan-label':'سيدان','monthly-jeep-label':'جيب / SUV',
+    'monthly-v4':'٤ زيارات','monthly-v6':'٦ زيارات','monthly-v8':'٨ زيارات','monthly-v12':'١٢ زيارة',
+    'monthly-addons-title':'خدمات إضافية اختيارية','monthly-addon-machine':'ترقية تلميع بالمكينة','monthly-addon-hand':'ترقية تلميع يدوي بالواكس',
+    'monthly-cta':'اشترك شهرياً',
+    'testi-eyebrow':'عملاء حقيقيون','testi-title':'ماذا يقولون','testi-sub':'رسائل حقيقية من عملاء في البحرين',
     'ext-eyebrow':'خدمات أخرى','ext-title':'أكثر من سيارات',
     'ext-bike-t':'غسيل دراجات','ext-bike-d':'غسيل وتفصيل كامل للدراجات النارية والهوائية.',
     'ext-boat-t':'غسيل قوارب','ext-boat-d':'خدمة تنظيف وتفصيل بحري.',
@@ -969,8 +1266,8 @@ const STRINGS = {
 
 const WA_BASE = 'https://wa.me/97338898886?text=';
 const WA_MSGS = {
-  en: { general:'Hello%2C+I+want+to+book+a+wash', silver:'Silver+package+booking', golden:'Golden+package+booking', vip:'Super+VIP+package+booking', loyalty:'I+want+a+loyalty+card', bike:'Bike+wash+enquiry', boat:'Boat+wash+enquiry', deep:'Deep+wash+enquiry' },
-  ar: { general:'%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%AD%D8%AC%D8%B2+%D8%BA%D8%B3%D9%8A%D9%84', silver:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D9%81%D8%B6%D9%8A', golden:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A', vip:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%B3%D9%88%D8%A8%D8%B1+%D9%81%D9%8A+%D8%A2%D9%8A+%D8%A8%D9%8A', loyalty:'%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A8%D8%B7%D8%A7%D9%82%D8%A9+%D9%88%D9%81%D8%A7%D8%A1', bike:'%D8%BA%D8%B3%D9%8A%D9%84+%D8%AF%D8%B1%D8%A7%D8%AC%D8%A9', boat:'%D8%BA%D8%B3%D9%8A%D9%84+%D9%82%D8%A7%D8%B1%D8%A8', deep:'%D8%BA%D8%B3%D9%8A%D9%84+%D8%B9%D9%85%D9%8A%D9%82' }
+  en: { general:'Hello%2C+I+want+to+book+a+wash', silver:'Silver+package+booking', golden:'Golden+package+booking', vip:'Super+VIP+package+booking', steam:'Steam+Washing+package+booking', machineVip:'Machine+VIP+polishing+booking', glow:'Glow+package+booking', monthly:'Monthly+subscription+enquiry', loyalty:'I+want+a+loyalty+card', bike:'Bike+wash+enquiry', boat:'Boat+wash+enquiry', deep:'Deep+wash+enquiry' },
+  ar: { general:'%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%AD%D8%AC%D8%B2+%D8%BA%D8%B3%D9%8A%D9%84', silver:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D9%81%D8%B6%D9%8A', golden:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A', vip:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%B3%D9%88%D8%A8%D8%B1+%D9%81%D9%8A+%D8%A2%D9%8A+%D8%A8%D9%8A', steam:'%D8%AD%D8%AC%D8%B2+%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D8%BA%D8%B3%D9%8A%D9%84+%D8%A8%D8%A7%D9%84%D8%A8%D8%AE%D8%A7%D8%B1', machineVip:'%D8%AD%D8%AC%D8%B2+%D8%AA%D9%84%D9%85%D9%8A%D8%B9+VIP', glow:'%D8%AD%D8%AC%D8%B2+%D8%A8%D8%A7%D9%82%D8%A9+%D8%AC%D9%84%D9%88', monthly:'%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1+%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83+%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A', loyalty:'%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A8%D8%B7%D8%A7%D9%82%D8%A9+%D9%88%D9%81%D8%A7%D8%A1', bike:'%D8%BA%D8%B3%D9%8A%D9%84+%D8%AF%D8%B1%D8%A7%D8%AC%D8%A9', boat:'%D8%BA%D8%B3%D9%8A%D9%84+%D9%82%D8%A7%D8%B1%D8%A8', deep:'%D8%BA%D8%B3%D9%8A%D9%84+%D8%B9%D9%85%D9%8A%D9%82' }
 };
 
 function setLang(lang) {
@@ -989,7 +1286,7 @@ function setLang(lang) {
   if (btn) btn.textContent = isAr ? 'English' : 'العربية';
 
   const m = WA_MSGS[lang] || WA_MSGS.en;
-  const map = { heroWa:m.general, navCta:m.general, mobileWa:m.general, bookWa:m.general, fabWa:m.general, loyWa:m.loyalty, silverCta:m.silver, goldenCta:m.golden, vipCta:m.vip, bikeWa:m.bike, boatWa:m.boat, deepWa:m.deep };
+  const map = { heroWa:m.general, navCta:m.general, mobileWa:m.general, bookWa:m.general, fabWa:m.general, loyWa:m.loyalty, silverCta:m.silver, goldenCta:m.golden, vipCta:m.vip, steamCta:m.steam, machineVipCta:m.machineVip, glowCta:m.glow, monthlyCta:m.monthly, bikeWa:m.bike, boatWa:m.boat, deepWa:m.deep };
 
   Object.entries(map).forEach(([id,msg]) => { const el=document.getElementById(id); if(el) el.href = WA_BASE+msg; });
 
