@@ -373,8 +373,10 @@ button{font:inherit}
   .stats-band-inner{
     display:flex;
     overflow-x:auto;
+    overflow-y:hidden;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
+    touch-action:pan-x;
     gap:12px;
     padding:0 20px 4px;
     grid-template-columns:unset;
