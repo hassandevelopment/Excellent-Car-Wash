@@ -895,13 +895,89 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
   .fab-wa-sub{display:none}
 }
 
-/* ── Reveal animations ────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
-.reveal.in{opacity:1;transform:none}
+/* ── Scroll reveal — 8 variants ──────────────────────── */
+.reveal       {opacity:0;transform:translateY(44px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+.reveal-left  {opacity:0;transform:translateX(-70px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+.reveal-right {opacity:0;transform:translateX(70px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+.reveal-scale {opacity:0;transform:scale(.82);transition:opacity .6s cubic-bezier(.34,1.56,.64,1),transform .6s cubic-bezier(.34,1.56,.64,1)}
+.reveal-zoom  {opacity:0;transform:scale(.6);transition:opacity .5s cubic-bezier(.34,1.56,.64,1),transform .5s cubic-bezier(.34,1.56,.64,1)}
+.reveal-blur  {opacity:0;filter:blur(10px);transform:translateY(18px);transition:opacity .75s ease,transform .75s ease,filter .75s ease}
+.reveal-flip  {opacity:0;transform:perspective(900px) rotateX(16deg) translateY(24px);transition:opacity .65s ease,transform .65s cubic-bezier(.22,.61,.36,1)}
+.reveal-bounce{opacity:0;transform:translateY(55px);transition:opacity .5s cubic-bezier(.34,1.56,.64,1),transform .75s cubic-bezier(.34,1.56,.64,1)}
+.reveal.in,.reveal-left.in,.reveal-right.in,.reveal-scale.in,.reveal-zoom.in,.reveal-blur.in,.reveal-flip.in,.reveal-bounce.in{
+  opacity:1;transform:none;filter:none;
+}
+
+/* ── Keyframes ────────────────────────────────────────── */
+@keyframes bar-grow   {from{width:0;opacity:0}to{width:36px;opacity:1}}
+@keyframes float-bob  {0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes spin-once  {from{transform:rotate(0) scale(.7)}to{transform:rotate(360deg) scale(1)}}
+@keyframes stamp-pop  {0%{transform:scale(0) rotate(-20deg);opacity:0}70%{transform:scale(1.22) rotate(4deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
+@keyframes num-pop    {from{transform:translateY(16px) scale(.75);opacity:0}to{transform:none;opacity:1}}
+@keyframes line-draw  {from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes shimmer-bg {0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes border-flash{0%,100%{border-color:rgba(227,24,55,.18)}50%{border-color:rgba(227,24,55,.55)}}
+@keyframes slide-down {from{transform:translateY(-16px);opacity:0}to{transform:none;opacity:1}}
+
+/* ── Sub-element micro-animations ────────────────────── */
+/* Label bars wipe in when their parent fires .in */
+.in .label-bar{animation:bar-grow .55s .12s ease both}
+
+/* Stat numbers pop when stat cell fires */
+.stat-cell.in .stat-num{animation:num-pop .55s .1s cubic-bezier(.34,1.56,.64,1) both}
+.stat-cell.in .stat-lbl{animation:num-pop .45s .28s ease both}
+
+/* Why card icon spins, number pops, text slides */
+.why-card.in .why-icon-wrap{animation:spin-once .75s .25s cubic-bezier(.34,1.56,.64,1) both}
+.why-card.in .why-num     {animation:num-pop  .5s  .15s cubic-bezier(.34,1.56,.64,1) both}
+.why-card.in .why-t       {animation:num-pop  .45s .28s ease both}
+.why-card.in .why-d       {animation:num-pop  .45s .38s ease both}
+
+/* Step cards — number pops, icon spins */
+.step-card.in .step-num-big{animation:num-pop  .5s  .05s cubic-bezier(.34,1.56,.64,1) both}
+.step-card.in .step-icon   {animation:spin-once .8s .2s  cubic-bezier(.34,1.56,.64,1) both}
+.step-card.in .step-t      {animation:num-pop  .4s  .35s ease both}
+.step-card.in .step-d      {animation:num-pop  .4s  .45s ease both}
+
+/* Testimonial cards — star + text cascade */
+.tm-card.in .tm-stars      {animation:slide-down .4s .1s ease both}
+.tm-card.in .tm-quote      {animation:num-pop   .5s .22s ease both}
+.tm-card.in .tm-name       {animation:slide-down .4s .38s ease both}
+
+/* Tier card heading + price appear after image */
+.tier-card.in .tier-name-text{animation:slide-down .4s .1s ease both}
+.tier-card.in .tier-sub-text {animation:slide-down .35s .18s ease both}
+.tier-card.in .tier-price-line{animation:num-pop  .4s .25s cubic-bezier(.34,1.56,.64,1) both}
+
+/* CTA headline shimmer after appearing */
+.book-headline.in{
+  background:linear-gradient(90deg,#fff 20%,var(--red) 50%,#fff 80%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer-bg 2.5s 1s ease forwards;
+}
+
+/* Stamp box individual pop — driven by JS stagger */
+.stamp-box{opacity:0;transform:scale(0) rotate(-20deg)}
+.stamp-box.in{animation:stamp-pop .55s cubic-bezier(.34,1.56,.64,1) forwards}
+
+/* Hover micro-interactions */
+.why-card:hover .why-icon-wrap{animation:float-bob 1.2s ease-in-out infinite}
+.tier-img-wrap img{transition:transform .5s ease}
+.tier-card:hover .tier-img-wrap img{transform:scale(1.03)}
+.step-icon{transition:transform .3s ease}
+.step-card:hover .step-icon{animation:float-bob 1s ease-in-out infinite}
+.ba-frame img{transition:transform .5s ease}
+.ba-frame:hover img{transform:scale(1.04)}
+
+/* Hero eyebrow bar floats */
+.hero-eyebrow-bar{animation:float-bob 2.8s 1s ease-in-out infinite}
+
 @media(prefers-reduced-motion:reduce){
   *{transition:none !important;animation:none !important}
   html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none}
+  .reveal,.reveal-left,.reveal-right,.reveal-scale,.reveal-zoom,.reveal-blur,.reveal-flip,.reveal-bounce{opacity:1;transform:none;filter:none}
+  .stamp-box{opacity:1;transform:none}
 }
 :focus-visible{outline:2px solid var(--red);outline-offset:3px}
 
@@ -1077,19 +1153,19 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       <p class="section-lede" data-i18n="why-lede">Most car washes ask you to drive to them. We come to you — fully equipped, trained, and ready to deliver showroom finish at your doorstep.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal">
+      <div class="why-card reveal-left">
         <span class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7M21 16v5h-5M21 21l-7-7M3 8V3h5M3 3l7 7"/></svg></span>
         <div class="why-num" data-i18n="why-1-n">01</div>
         <p class="why-t" data-i18n="why-1-t">We Come to You</p>
         <p class="why-d" data-i18n="why-1-d">Home, office, compound — anywhere in Bahrain. Our van arrives with water, power, and tools.</p>
       </div>
-      <div class="why-card reveal" style="transition-delay:.1s">
+      <div class="why-card reveal-scale" style="transition-delay:.12s">
         <span class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span>
         <div class="why-num" data-i18n="why-2-n">02</div>
         <p class="why-t" data-i18n="why-2-t">Steam Technology</p>
         <p class="why-d" data-i18n="why-2-d">Professional steam equipment lifts dirt, bacteria, and grime from interiors and AC vents — without flooding your car.</p>
       </div>
-      <div class="why-card reveal" style="transition-delay:.2s">
+      <div class="why-card reveal-right" style="transition-delay:.24s">
         <span class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M20 7L12 3 4 7l8 4 8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>
         <div class="why-num" data-i18n="why-3-n">03</div>
         <p class="why-t" data-i18n="why-3-t">Trained Specialists</p>
@@ -1111,7 +1187,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
     <div class="tier-grid">
 
       <!-- SILVER -->
-      <div class="tier-card tier-silver reveal">
+      <div class="tier-card tier-silver reveal-left">
         <div class="tier-img-wrap">
           <img src="brand_assets/p11.jpeg" alt="Silver foam wash package" loading="lazy">
         </div>
@@ -1128,7 +1204,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
 
       <!-- STEAM WASH -->
-      <div class="tier-card tier-steam reveal" style="transition-delay:.06s">
+      <div class="tier-card tier-steam reveal-bounce" style="transition-delay:.08s">
         <div class="tier-img-wrap">
           <img src="brand_assets/p14.jpeg" alt="Steam washing package" loading="lazy">
         </div>
@@ -1145,7 +1221,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
 
       <!-- GOLDEN -->
-      <div class="tier-card tier-golden reveal" style="transition-delay:.12s">
+      <div class="tier-card tier-golden reveal-right" style="transition-delay:.16s">
         <div class="tier-img-wrap">
           <img src="brand_assets/p16.jpeg" alt="Golden hand polishing package" loading="lazy">
         </div>
@@ -1162,7 +1238,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
 
       <!-- VIP MACHINE POLISH -->
-      <div class="tier-card tier-vippol reveal">
+      <div class="tier-card tier-vippol reveal-flip">
         <div class="tier-img-wrap">
           <img src="brand_assets/p09.jpeg" alt="VIP machine exterior polishing" loading="lazy">
         </div>
@@ -1179,7 +1255,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
 
       <!-- DEEP CLEANING -->
-      <div class="tier-card tier-deep reveal" style="transition-delay:.06s">
+      <div class="tier-card tier-deep reveal-scale" style="transition-delay:.1s">
         <div class="tier-img-wrap">
           <img src="brand_assets/p10.jpeg" alt="Deep cleaning interior package" loading="lazy">
         </div>
@@ -1196,7 +1272,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
 
       <!-- GLOW -->
-      <div class="tier-card tier-glow reveal" style="transition-delay:.12s">
+      <div class="tier-card tier-glow reveal-blur" style="transition-delay:.2s">
         <div class="tier-img-wrap">
           <img src="brand_assets/p12.jpeg" alt="GLOW paint correction package" loading="lazy">
         </div>
@@ -1213,7 +1289,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
 
       <!-- SUPER VIP -->
-      <div class="tier-card tier-vip reveal" style="transition-delay:.18s">
+      <div class="tier-card tier-vip reveal-zoom" style="transition-delay:.3s">
         <div class="tier-img-wrap">
           <img src="brand_assets/p15.jpeg" alt="Super VIP comprehensive detailing" loading="lazy">
         </div>
@@ -1242,7 +1318,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       <p class="section-lede" data-i18n="plans-lede">For cars that need to look sharp every week. Pre-pay for 4 / 6 / 8 / 12 visits a month and save up to <strong>40%</strong> per wash. Cancel anytime.</p>
     </div>
 
-    <div class="plans-poster reveal">
+    <div class="plans-poster reveal-scale">
       <div class="plans-poster-img">
         <img src="brand_assets/p13.jpeg" data-img-en="brand_assets/p13.jpeg" data-img-ar="brand_assets/p05.jpeg" alt="Monthly subscription packages" loading="lazy">
       </div>
@@ -1274,19 +1350,19 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
     </div>
 
     <div class="ba-grid">
-      <div class="ba-frame reveal">
+      <div class="ba-frame reveal-scale">
         <img src="brand_assets/p21.jpeg" alt="BMW engine bay before and after steam cleaning">
         <span class="ba-caption" data-i18n="ba1">BMW Engine Bay · Steam Restoration</span>
       </div>
-      <div class="ba-frame reveal" style="transition-delay:.08s">
+      <div class="ba-frame reveal-flip" style="transition-delay:.1s">
         <img src="brand_assets/p19.jpeg" alt="Faded headlight restoration before and after">
         <span class="ba-caption" data-i18n="ba2">Headlight Restoration</span>
       </div>
-      <div class="ba-frame reveal" style="transition-delay:.16s">
+      <div class="ba-frame reveal-flip" style="transition-delay:.2s">
         <img src="brand_assets/p20.jpeg" alt="Beige interior fabric seats before and after deep clean">
         <span class="ba-caption" data-i18n="ba3">Fabric Seats Deep Clean</span>
       </div>
-      <div class="ba-frame reveal" style="transition-delay:.24s">
+      <div class="ba-frame reveal-scale" style="transition-delay:.3s">
         <img src="brand_assets/p18.jpeg" alt="Stained rear seats before and after deep cleaning">
         <span class="ba-caption" data-i18n="ba4">Stain Removal · Rear Bench</span>
       </div>
@@ -1304,7 +1380,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
     </div>
 
     <div class="testimonials-grid">
-      <article class="tm-card reveal">
+      <article class="tm-card reveal-flip">
         <div class="tm-stars" aria-label="5 stars">
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
@@ -1322,7 +1398,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
         </div>
       </article>
 
-      <article class="tm-card reveal" style="transition-delay:.1s">
+      <article class="tm-card reveal-flip" style="transition-delay:.14s">
         <div class="tm-stars" aria-label="5 stars">
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
@@ -1340,7 +1416,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
         </div>
       </article>
 
-      <article class="tm-card reveal" style="transition-delay:.2s">
+      <article class="tm-card reveal-flip" style="transition-delay:.28s">
         <div class="tm-stars" aria-label="5 stars">
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
@@ -1369,19 +1445,19 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       <h2 class="d-title" data-i18n="how-title">HOW IT WORKS</h2>
     </div>
     <div class="how-steps">
-      <div class="step-card reveal">
+      <div class="step-card reveal-bounce">
         <div class="step-num-big">01</div>
         <span class="step-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></span>
         <p class="step-t" data-i18n="how-1-t">WhatsApp Us</p>
         <p class="step-d" data-i18n="how-1-d">Send your location, car type and preferred package. We confirm in minutes.</p>
       </div>
-      <div class="step-card reveal" style="transition-delay:.12s">
+      <div class="step-card reveal-bounce" style="transition-delay:.15s">
         <div class="step-num-big">02</div>
         <span class="step-icon"><svg viewBox="0 0 24 24"><path d="M3 17h2.5l1.5-5h11l1.5 5H22M3 17l1-4M22 17l-1-4M5 17v3M19 17v3"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/></svg></span>
         <p class="step-t" data-i18n="how-2-t">We Drive to You</p>
         <p class="step-d" data-i18n="how-2-d">Our branded Hyundai Staria arrives fully equipped — water, power, steam, foam, polishing tools.</p>
       </div>
-      <div class="step-card reveal" style="transition-delay:.24s">
+      <div class="step-card reveal-bounce" style="transition-delay:.3s">
         <div class="step-num-big">03</div>
         <span class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
         <p class="step-t" data-i18n="how-3-t">Drive Away Spotless</p>
@@ -1423,7 +1499,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
   <div class="book-inner">
     <div class="reveal">
       <div class="section-label" style="color:rgba(255,255,255,.7)"><span style="display:block;width:30px;height:3px;background:rgba(255,255,255,.6);flex-shrink:0;border-radius:2px"></span><span data-i18n="cta-eyebrow">Ready When You Are</span></div>
-      <h2 class="book-headline" data-i18n="cta-title">BOOK YOUR WASH TODAY</h2>
+      <h2 class="book-headline reveal-scale" data-i18n="cta-title">BOOK YOUR WASH TODAY</h2>
       <p class="book-lede" data-i18n="cta-lede">WhatsApp or call us. We cover all of Bahrain and most appointments are confirmed in minutes.</p>
       <div class="cta-row">
         <a id="bookWa" href="https://wa.me/97338898886?text=Hello%2C+I+want+to+book+a+wash" class="btn btn-outline-white" target="_blank" rel="noopener">
@@ -1629,14 +1705,36 @@ document.getElementById('langToggle').addEventListener('click', () => {
   setLang(document.documentElement.lang === 'ar' ? 'en' : 'ar');
 });
 
-/* Scroll reveal */
+/* Scroll reveal — all 8 variants */
 (function(){
+  const CLASSES = '.reveal,.reveal-left,.reveal-right,.reveal-scale,.reveal-zoom,.reveal-blur,.reveal-flip,.reveal-bounce';
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }, { threshold: 0.07, rootMargin: '0px 0px -24px 0px' });
+  document.querySelectorAll(CLASSES).forEach(el => io.observe(el));
+
+  /* Loyalty stamps — staggered pop */
+  const stamps = document.querySelectorAll('.stamp-box');
+  if(stamps.length){
+    const stampObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          stamps.forEach((s,i) => setTimeout(() => s.classList.add('in'), i * 110));
+          stampObs.disconnect();
+        }
+      });
+    }, {threshold:0.25});
+    const wrap = document.querySelector('.loy-stamps-wrap');
+    if(wrap) stampObs.observe(wrap);
+  }
+
+  /* Stat cells — fire .in individually so num-pop triggers per cell */
+  const statObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); statObs.unobserve(e.target); } });
+  }, {threshold:0.4});
+  document.querySelectorAll('.stat-cell').forEach(el => statObs.observe(el));
 })();
 
 /* Init lang from storage */
