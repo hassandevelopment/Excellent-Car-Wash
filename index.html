@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Excellent Car Wash — Mobile Car Detailing · Bahrain</title>
-<meta name="description" content="Premium mobile car wash and detailing in Bahrain. We drive to you — home, office, anywhere. Silver, Golden & Super VIP packages. Book on WhatsApp.">
+<meta name="description" content="Premium mobile car wash and detailing in Bahrain. We drive to you — home, office, anywhere. Seven packages from BD 7. Book on WhatsApp.">
 <meta property="og:title" content="Excellent Car Wash — Mobile Detailing · Bahrain">
 <meta property="og:description" content="We drive to you. Steam-powered mobile car wash across all of Bahrain.">
-<meta property="og:image" content="brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg">
+<meta property="og:image" content="brand_assets/van_clean.jpg">
 
 <script type="application/ld+json">
 {
@@ -20,38 +20,14 @@
 }
 </script>
 
-<!-- Barlow Condensed (motorsport display) + Inter (body) + Cairo (Arabic) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          red:   '#E31837',
-          'red-d':'#B80E2C',
-          ink:   '#0C0C0C',
-          chalk: '#FAFAFA',
-          warm:  '#F2EEE8',
-          muted: '#6B6B6B',
-          line:  '#E5E5E5',
-          silver:'#A8A8A8',
-        },
-        fontFamily: {
-          display:['Barlow Condensed','system-ui','sans-serif'],
-          body:   ['Inter','system-ui','sans-serif'],
-          arabic: ['Cairo','system-ui','sans-serif'],
-        }
-      }
-    }
-  }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* ── Base ──────────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────
+   BASE
+   ────────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -59,487 +35,839 @@ body{
   background:#FAFAFA;color:#0C0C0C;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;margin:0;padding:0;
+  line-height:1.5;
+}
+img{max-width:100%;display:block}
+button{font:inherit}
+:root{
+  --red:#E31837;
+  --red-d:#B80E2C;
+  --ink:#0C0C0C;
+  --ink-2:#141414;
+  --ink-3:#1a1a1a;
+  --chalk:#FAFAFA;
+  --warm:#F2EEE8;
+  --muted:#6B6B6B;
+  --line:#E5E5E5;
 }
 
-/* ── Arabic mode ───────────────────────────────────────────── */
-.ar-mode,.ar-mode *:not(.no-ar){
+/* ── Arabic mode ───────────────────────────────────────── */
+.ar-mode body,.ar-mode *:not(.no-ar){
   font-family:'Cairo',system-ui,sans-serif !important;
   letter-spacing:0 !important;
 }
-.ar-mode .d-title,.ar-mode .hero-headline,.ar-mode .tier-name-text{
-  font-size:clamp(2.2rem,8vw,5rem) !important;
+.ar-mode .d-title,.ar-mode .hero-headline,.ar-mode .tier-name-text,.ar-mode .book-headline{
   line-height:1.1 !important;
 }
-.ar-mode .hero-eyebrow-txt,.ar-mode .section-label{letter-spacing:0 !important}
-[dir="rtl"] .slash{transform:scaleX(-1)}
 [dir="rtl"] .hero-text{text-align:right}
 [dir="rtl"] .cta-row{flex-direction:row-reverse}
-[dir="rtl"] .feat{flex-direction:row-reverse}
-[dir="rtl"] .step-connector{display:none}
+[dir="rtl"] .feat{flex-direction:row-reverse;text-align:right}
 [dir="rtl"] .foot-row{flex-direction:row-reverse}
 [dir="rtl"] .mobile-nav-links a{text-align:right}
+[dir="rtl"] .tier-pricing{flex-direction:row-reverse}
+[dir="rtl"] .reveal{}
 
-/* ── Typography ────────────────────────────────────────────── */
+/* ── Typography ────────────────────────────────────────── */
 .d-title{
   font-family:'Barlow Condensed',sans-serif;
   font-weight:900;font-style:italic;
   text-transform:uppercase;
   line-height:.92;letter-spacing:-.01em;
-  font-size:clamp(3rem,9vw,6rem);
+  font-size:clamp(2.4rem,7vw,5rem);
+  margin:0;
 }
+.ar-mode .d-title{font-style:normal}
 .d-label{
   font-family:'Barlow Condensed',sans-serif;
   font-weight:700;font-style:italic;
   text-transform:uppercase;letter-spacing:.06em;
   font-size:.8rem;
 }
-.ar-mode .d-title{font-style:normal !important}
-.ar-mode .d-label{font-style:normal !important}
+.ar-mode .d-label{font-style:normal}
 
-/* ── Nav ──────────────────────────────────────────────────── */
+.section-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+  text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;
+  color:var(--red);margin-bottom:14px;
+}
+.label-bar{display:block;width:30px;height:3px;background:var(--red);flex-shrink:0;border-radius:2px}
+.ar-mode .section-label{font-style:normal;letter-spacing:0}
+
+.section-lede{
+  font-size:.95rem;
+  color:var(--muted);
+  max-width:560px;
+  margin:14px 0 0;
+  line-height:1.7;
+}
+
+/* ──────────────────────────────────────────────────────────
+   NAV
+   ────────────────────────────────────────────────────────── */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:50;
-  background:#0C0C0C;
-  border-bottom:3px solid #E31837;
+  background:rgba(12,12,12,.95);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:2px solid var(--red);
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 20px;height:60px;gap:12px;
+  padding:0 24px;height:64px;gap:12px;
 }
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
-.nav-brand img{height:36px;width:auto;display:block}
-.nav-brand-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:18px;color:#fff;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
-.ar-mode .nav-brand-name{font-style:normal;font-family:'Cairo',sans-serif !important}
-.nav-links{display:none;align-items:center;gap:0;list-style:none;margin:0;padding:0}
-.nav-links a{
-  text-decoration:none;color:#aaa;
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;font-size:15px;text-transform:uppercase;letter-spacing:.05em;
-  padding:8px 14px;transition:color .15s,background .15s;
-  display:block;
+.nav-brand img{height:40px;width:auto;display:block}
+.nav-brand-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+  font-size:18px;color:#fff;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;
 }
-.ar-mode .nav-links a{font-style:normal;font-family:'Cairo',sans-serif !important}
+.ar-mode .nav-brand-name{font-style:normal}
+.nav-links{display:none;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.nav-links a{
+  text-decoration:none;color:#bbb;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;font-size:14px;
+  text-transform:uppercase;letter-spacing:.06em;
+  padding:8px 14px;border-radius:4px;
+  transition:color .15s,background .15s;
+}
+.ar-mode .nav-links a{font-style:normal}
 .nav-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
-@media(min-width:820px){.nav-links{display:flex}}
+@media(min-width:900px){.nav-links{display:flex}}
 .nav-right{display:flex;align-items:center;gap:8px}
 
-/* Language button */
 .lang-btn{
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
-  color:#ccc;font-size:11px;font-weight:700;padding:5px 10px;border-radius:4px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  color:#ddd;font-size:12px;font-weight:700;padding:6px 12px;border-radius:4px;
   cursor:pointer;white-space:nowrap;font-family:'Cairo',sans-serif;
-  transition:background .15s;flex-shrink:0;
+  transition:background .15s,color .15s;flex-shrink:0;
 }
-.lang-btn:hover{background:rgba(255,255,255,.14)}
+.lang-btn:hover{background:rgba(255,255,255,.14);color:#fff}
 
-/* Burger */
 .burger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0}
 .burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .22s,opacity .18s}
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(min-width:820px){.burger{display:none}}
+@media(min-width:900px){.burger{display:none}}
 
 /* Mobile nav */
 .mobile-nav{
   position:fixed;inset:0;z-index:49;
-  background:#0C0C0C;
+  background:var(--ink);
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   opacity:0;pointer-events:none;transition:opacity .22s ease;
+  padding-top:64px;
 }
 .mobile-nav.open{opacity:1;pointer-events:auto}
-.mobile-nav-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;align-items:center;gap:4px;width:100%}
+.mobile-nav-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;max-width:520px}
 .mobile-nav-links a{
   display:block;color:#fff;text-decoration:none;
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:clamp(2rem,10vw,3rem);text-transform:uppercase;letter-spacing:.02em;
-  padding:10px 40px;width:100%;text-align:center;
-  transition:color .15s;border-bottom:1px solid rgba(255,255,255,.06);
+  font-size:clamp(1.8rem,8vw,2.6rem);text-transform:uppercase;letter-spacing:.02em;
+  padding:14px 32px;width:100%;text-align:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  transition:color .15s,background .15s;
 }
-.ar-mode .mobile-nav-links a{font-style:normal;font-family:'Cairo',sans-serif !important}
-.mobile-nav-links a:hover{color:#E31837}
-.mobile-nav-footer{margin-top:32px;display:flex;gap:12px}
+.ar-mode .mobile-nav-links a{font-style:normal}
+.mobile-nav-links a:hover{color:var(--red);background:rgba(227,24,55,.05)}
+.mobile-nav-footer{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 
-/* ── Buttons ──────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────
+   BUTTONS
+   ────────────────────────────────────────────────────────── */
 .btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:13px 26px;border-radius:4px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 26px;border-radius:4px;
   font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;
   font-size:15px;text-transform:uppercase;letter-spacing:.06em;
   text-decoration:none;border:2px solid transparent;cursor:pointer;
-  transition:background .15s,transform .12s,box-shadow .15s;white-space:nowrap;
+  transition:background .15s,transform .12s,box-shadow .15s,border-color .15s;
+  white-space:nowrap;line-height:1;
 }
-.ar-mode .btn{font-style:normal;font-family:'Cairo',sans-serif !important;letter-spacing:0}
+.ar-mode .btn{font-style:normal;letter-spacing:0}
 .btn:active{transform:scale(.97)}
-.btn-red{background:#E31837;color:#fff;border-color:#E31837;box-shadow:0 4px 18px rgba(227,24,55,.3)}
-.btn-red:hover{background:#B80E2C;border-color:#B80E2C}
+.btn-sm{padding:10px 18px;font-size:13px}
+.btn-red{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 4px 18px rgba(227,24,55,.3)}
+.btn-red:hover{background:var(--red-d);border-color:var(--red-d)}
 .btn-wa{background:#25D366;color:#fff;border-color:#25D366;box-shadow:0 4px 18px rgba(37,211,102,.28)}
 .btn-wa:hover{background:#1EB857;border-color:#1EB857}
 .btn-outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
 .btn-outline-white:hover{background:rgba(255,255,255,.08);border-color:#fff}
-.btn-outline-dark{background:transparent;color:#0C0C0C;border-color:rgba(12,12,12,.35)}
-.btn-outline-dark:hover{background:#0C0C0C;color:#fff;border-color:#0C0C0C}
+.btn-outline-dark{background:transparent;color:var(--ink);border-color:rgba(12,12,12,.35)}
+.btn-outline-dark:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-ghost{background:transparent;color:#fff;border-color:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.06)}
 
-/* ── Diagonal stripe decorative ──────────────────────────── */
-.stripe-accent{
-  position:absolute;top:0;bottom:0;
-  width:5px;background:#E31837;
-  transform:skewX(-12deg);
-  transform-origin:top;
-}
-
-/* ── Section labels ───────────────────────────────────────── */
-.section-label{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
-  text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;
-  color:#E31837;margin-bottom:12px;
-}
-.label-bar{display:block;width:28px;height:3px;background:#E31837;flex-shrink:0;border-radius:2px}
-.ar-mode .section-label{font-style:normal;letter-spacing:0}
-
-/* ── HERO ─────────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────
+   HERO
+   ────────────────────────────────────────────────────────── */
 .hero{
-  position:relative;min-height:100dvh;background:#0C0C0C;
-  display:grid;align-items:center;overflow:hidden;padding-top:60px;
+  position:relative;
+  min-height:100dvh;
+  background:var(--ink);
+  display:flex;align-items:center;
+  overflow:hidden;
+  padding-top:64px;
 }
-/* Full-bleed van photo */
-.hero-photo{
+.hero-bg{
   position:absolute;inset:0;
-  background:url('brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg') right center / auto 100% no-repeat;
-}
-.hero-photo::after{
-  content:'';position:absolute;inset:0;
   background:
-    linear-gradient(to right, #0C0C0C 0%, #0C0C0C 20%, rgba(12,12,12,.75) 45%, rgba(12,12,12,.08) 100%),
-    linear-gradient(to top, #0C0C0C 0%, transparent 28%);
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(227,24,55,.18) 0%, transparent 60%),
+    linear-gradient(135deg, #0a0a0a 0%, #0C0C0C 50%, #161616 100%);
+  z-index:0;
 }
-@media(max-width:819px){
-  .hero-photo{background:url('brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg') center top / cover no-repeat}
-  .hero-photo::after{
-    background:linear-gradient(to bottom, rgba(12,12,12,.55) 0%, rgba(12,12,12,.82) 50%, #0C0C0C 75%);
-  }
+.hero-bg::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 50%, #000 30%, transparent 80%);
 }
 .hero-inner{
   position:relative;z-index:1;
-  max-width:1200px;margin:0 auto;width:100%;
-  padding:40px 24px;
+  max-width:1280px;margin:0 auto;width:100%;
+  padding:48px 24px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:40px;
+  align-items:center;
 }
-.hero-text{max-width:600px}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;
+@media(min-width:900px){
+  .hero-inner{grid-template-columns:1.05fr .95fr;gap:64px;padding:80px 32px}
 }
-.hero-eyebrow-bar{width:32px;height:3px;background:#E31837;flex-shrink:0;border-radius:2px}
+.hero-text{max-width:640px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
+.hero-eyebrow-bar{width:36px;height:3px;background:var(--red);flex-shrink:0;border-radius:2px}
 .hero-eyebrow-txt{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;
-  font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:#E31837;
+  font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--red);
 }
 .ar-mode .hero-eyebrow-txt{font-style:normal}
 .hero-headline{
   font-family:'Barlow Condensed',sans-serif;
   font-weight:900;font-style:italic;text-transform:uppercase;
-  font-size:clamp(2.8rem,8vw,5.5rem);
-  line-height:.95;letter-spacing:-.01em;
-  color:#fff;margin:0 0 24px;
+  font-size:clamp(2.8rem,8.5vw,6rem);
+  line-height:.92;letter-spacing:-.012em;
+  color:#fff;margin:0 0 26px;
 }
 .ar-mode .hero-headline{
-  font-family:'Cairo',sans-serif !important;
   font-style:normal !important;
-  font-size:clamp(2.2rem,6vw,4rem);
+  font-size:clamp(2.2rem,6.5vw,4.5rem);
   line-height:1.1;
 }
-.hero-headline .accent{color:#E31837}
+.hero-headline .accent{color:var(--red)}
+.hero-headline .slash{
+  display:inline-block;color:var(--red);
+  margin:0 .06em;
+  font-style:italic;font-weight:900;
+}
 .hero-lede{
-  font-size:1rem;line-height:1.7;color:rgba(255,255,255,.65);
-  max-width:480px;margin:0 0 36px;
+  font-size:1.05rem;line-height:1.7;color:rgba(255,255,255,.72);
+  max-width:520px;margin:0 0 36px;
 }
-.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
-/* ── Stats band ───────────────────────────────────────────── */
-.stats-band{background:#E31837;padding:0}
+.hero-photo-wrap{
+  position:relative;
+  aspect-ratio:5/4;
+  border-radius:14px;
+  overflow:hidden;
+  background:#0a0a0a;
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.5),
+    0 0 0 1px rgba(227,24,55,.15),
+    inset 0 0 0 1px rgba(255,255,255,.04);
+}
+.hero-photo-wrap img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+}
+.hero-photo-tag{
+  position:absolute;left:18px;bottom:18px;z-index:2;
+  background:rgba(12,12,12,.85);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.08);
+  padding:9px 14px;border-radius:6px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;
+  font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#fff;
+  display:flex;align-items:center;gap:8px;
+}
+.ar-mode .hero-photo-tag{font-style:normal;letter-spacing:0}
+.hero-photo-tag::before{
+  content:'';width:8px;height:8px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 8px var(--red);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(.85)}
+}
+
+.hero-trust{
+  margin-top:36px;
+  display:flex;gap:24px;flex-wrap:wrap;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.hero-trust-item{display:flex;align-items:center;gap:10px}
+.hero-trust-icon{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(227,24,55,.12);
+  border:1px solid rgba(227,24,55,.3);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;color:var(--red);
+}
+.hero-trust-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-trust-text{display:flex;flex-direction:column;gap:1px;line-height:1.1}
+.hero-trust-t{color:#fff;font-size:.88rem;font-weight:700}
+.hero-trust-d{color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+.ar-mode .hero-trust-d{letter-spacing:0;text-transform:none}
+
+/* ──────────────────────────────────────────────────────────
+   STATS BAND
+   ────────────────────────────────────────────────────────── */
+.stats-band{background:var(--red);padding:0;position:relative;overflow:hidden}
+.stats-band::before{
+  content:'';position:absolute;left:0;right:0;top:0;height:100%;
+  background-image:
+    linear-gradient(110deg, transparent 0%, transparent 80%, rgba(0,0,0,.1) 100%);
+  pointer-events:none;
+}
 .stats-band-inner{
-  max-width:1200px;margin:0 auto;
+  max-width:1280px;margin:0 auto;
   display:grid;grid-template-columns:repeat(2,1fr);
+  position:relative;
 }
-@media(min-width:600px){.stats-band-inner{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:680px){.stats-band-inner{grid-template-columns:repeat(4,1fr)}}
 .stat-cell{
-  padding:18px 20px;text-align:center;
-  border-right:1px solid rgba(255,255,255,.2);
+  padding:24px 20px;text-align:center;
+  border-right:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
 }
-.stat-cell:last-child{border-right:none}
+@media(min-width:680px){
+  .stat-cell{border-bottom:none}
+  .stat-cell:last-child{border-right:none}
+}
+@media(max-width:679px){
+  .stat-cell:nth-child(2n){border-right:none}
+  .stat-cell:nth-child(n+3){border-bottom:none}
+}
 .stat-num{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:2rem;color:#fff;line-height:1;
+  font-size:2.4rem;color:#fff;line-height:1;
 }
-.ar-mode .stat-num{font-style:normal;font-family:'Cairo',sans-serif !important}
-.stat-lbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:3px}
+.ar-mode .stat-num{font-style:normal}
+.stat-lbl{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:5px}
 .ar-mode .stat-lbl{letter-spacing:0}
 
-/* ── WHY section (light) ──────────────────────────────────── */
-.why-section{background:#FAFAFA;padding:88px 24px}
-.why-inner{max-width:1200px;margin:0 auto}
-.why-grid{display:grid;grid-template-columns:1fr;gap:1px;background:#E5E5E5;border:1px solid #E5E5E5;border-radius:12px;overflow:hidden}
-@media(min-width:640px){.why-grid{grid-template-columns:repeat(3,1fr)}}
-.why-card{
-  background:#fff;padding:36px 28px;
-  transition:background .2s;
+/* ──────────────────────────────────────────────────────────
+   GENERIC SECTION CONTAINER
+   ────────────────────────────────────────────────────────── */
+.section{padding:100px 24px;position:relative}
+@media(max-width:639px){.section{padding:72px 20px}}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-header{margin-bottom:48px;max-width:760px}
+.section-dark{background:var(--ink);color:#fff}
+.section-dark .d-title{color:#fff}
+.section-dark .section-lede{color:rgba(255,255,255,.6)}
+.section-light{background:var(--chalk)}
+.section-warm{background:var(--warm)}
+
+/* ──────────────────────────────────────────────────────────
+   WHY GRID
+   ────────────────────────────────────────────────────────── */
+.why-grid{
+  display:grid;grid-template-columns:1fr;gap:1px;
+  background:var(--line);border:1px solid var(--line);
+  border-radius:12px;overflow:hidden;
 }
-.why-card:hover{background:#F5F5F5}
+@media(min-width:720px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why-card{
+  background:#fff;padding:40px 32px;
+  transition:background .2s;
+  position:relative;
+}
+.why-card:hover{background:#FBFBFB}
+.why-icon-wrap{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(227,24,55,.08);border:1px solid rgba(227,24,55,.2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);margin-bottom:20px;
+}
+.why-icon-wrap svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .why-num{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:3.5rem;color:#E31837;line-height:1;margin-bottom:16px;
+  font-size:.85rem;color:var(--red);line-height:1;margin-bottom:10px;
+  letter-spacing:.1em;
 }
-.ar-mode .why-num{font-style:normal;font-family:'Cairo',sans-serif !important}
-.why-t{font-size:1.05rem;font-weight:700;color:#0C0C0C;margin:0 0 10px}
-.why-d{font-size:.88rem;line-height:1.7;color:#666;margin:0}
+.ar-mode .why-num{font-style:normal;letter-spacing:0}
+.why-t{font-size:1.15rem;font-weight:700;color:var(--ink);margin:0 0 12px}
+.why-d{font-size:.92rem;line-height:1.7;color:var(--muted);margin:0}
 
-/* ── SERVICES (dark) ──────────────────────────────────────── */
-.services-section{background:#0C0C0C;padding:88px 24px}
-.services-inner{max-width:1200px;margin:0 auto}
-.tier-grid{display:grid;grid-template-columns:1fr;gap:2px;background:#222}
-@media(min-width:700px){.tier-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1100px){.tier-grid{grid-template-columns:repeat(3,1fr)}}
-.tier-card{
-  background:#141414;padding:0;overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:background .2s;
+/* ──────────────────────────────────────────────────────────
+   PACKAGE TIERS
+   ────────────────────────────────────────────────────────── */
+.tier-grid{
+  display:grid;grid-template-columns:1fr;gap:16px;
 }
-.tier-card:hover{background:#1a1a1a}
-.tier-img-wrap{position:relative;height:160px;overflow:hidden;flex-shrink:0}
-.tier-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 68%;display:block;transition:transform .4s ease}
-.tier-card:hover .tier-img-wrap img{transform:scale(1.05)}
-.tier-color-bar{height:4px;flex-shrink:0}
-.tier-silver .tier-color-bar{background:linear-gradient(to right,#888,#C8C8C8,#888)}
-.tier-golden .tier-color-bar{background:linear-gradient(to right,#8B6914,#D4AF37,#8B6914)}
-.tier-vip .tier-color-bar{background:#E31837}
-.tier-body{padding:24px;flex:1;display:flex;flex-direction:column}
+@media(min-width:680px){.tier-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.tier-grid{grid-template-columns:repeat(3,1fr)}}
+.tier-card{
+  background:var(--ink-2);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+  position:relative;
+}
+.tier-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,.14);
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+}
+.tier-img-wrap{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#0a0a0a;
+}
+.tier-img-wrap img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  display:block;
+}
+
+.tier-badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  padding:6px 12px;border-radius:4px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;
+  display:inline-flex;align-items:center;gap:6px;
+  box-shadow:0 4px 14px rgba(0,0,0,.3);
+}
+.ar-mode .tier-badge{font-style:normal;letter-spacing:0}
+.tier-badge.popular{background:var(--red);color:#fff}
+.tier-badge.featured{background:#E0B544;color:#0C0C0C}
+
+.tier-body{padding:22px 24px 24px;flex:1;display:flex;flex-direction:column;gap:14px}
+.tier-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .tier-name-text{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  text-transform:uppercase;font-size:2.2rem;line-height:1;margin:0 0 3px;
+  text-transform:uppercase;font-size:1.85rem;line-height:1;margin:0;
+  letter-spacing:.01em;
 }
-.ar-mode .tier-name-text{font-style:normal;font-family:'Cairo',sans-serif !important;font-size:1.8rem}
-.tier-silver .tier-name-text{color:#C8C8C8}
-.tier-golden .tier-name-text{color:#D4AF37}
-.tier-vip .tier-name-text{color:#E31837}
-.tier-sub-text{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#555;margin-bottom:20px}
+.ar-mode .tier-name-text{font-style:normal;font-size:1.6rem}
+.tier-sub-text{
+  font-size:.74rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#777;margin:4px 0 0;
+}
 .ar-mode .tier-sub-text{letter-spacing:0;text-transform:none}
-.tier-pricing{
-  display:flex;gap:20px;padding:16px 0;margin-bottom:20px;
-  border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);
+.tier-price-line{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+  font-size:1.4rem;line-height:1;color:#fff;white-space:nowrap;
 }
-.price-block{display:flex;flex-direction:column}
-.price-lbl{font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#555;margin-bottom:4px}
+.ar-mode .tier-price-line{font-style:normal;font-size:1.2rem}
+.tier-price-line .currency{font-size:.7em;opacity:.7;margin-right:.15em;font-weight:700}
+.tier-price-line .sep{opacity:.3;margin:0 .3em}
+
+/* tier color */
+.tier-silver .tier-name-text{color:#D5D5D5}
+.tier-silver .tier-bullet{background:rgba(213,213,213,.12);color:#D5D5D5}
+.tier-silver .tier-book-btn{background:rgba(213,213,213,.08);color:#D5D5D5;border:1px solid rgba(213,213,213,.2)}
+.tier-silver .tier-book-btn:hover{background:rgba(213,213,213,.16)}
+.tier-silver .price-val{color:#fff}
+
+.tier-steam .tier-name-text{color:#4FB5DC}
+.tier-steam .tier-bullet{background:rgba(79,181,220,.14);color:#4FB5DC}
+.tier-steam .tier-book-btn{background:rgba(79,181,220,.1);color:#4FB5DC;border:1px solid rgba(79,181,220,.28)}
+.tier-steam .tier-book-btn:hover{background:rgba(79,181,220,.2)}
+.tier-steam .price-val{color:#fff}
+
+.tier-golden .tier-name-text{color:#E0B544}
+.tier-golden .tier-bullet{background:rgba(212,175,55,.14);color:#E0B544}
+.tier-golden .tier-book-btn{background:rgba(212,175,55,.1);color:#E0B544;border:1px solid rgba(212,175,55,.28)}
+.tier-golden .tier-book-btn:hover{background:rgba(212,175,55,.2)}
+.tier-golden .price-val{color:#fff}
+
+.tier-vippol .tier-name-text{color:#E27468}
+.tier-vippol .tier-bullet{background:rgba(226,116,104,.14);color:#E27468}
+.tier-vippol .tier-book-btn{background:rgba(226,116,104,.1);color:#E27468;border:1px solid rgba(226,116,104,.3)}
+.tier-vippol .tier-book-btn:hover{background:rgba(226,116,104,.22)}
+.tier-vippol .price-val{color:#fff}
+
+.tier-deep .tier-name-text{color:#F2D8C6}
+.tier-deep .tier-bullet{background:rgba(242,216,198,.14);color:#F2D8C6}
+.tier-deep .tier-book-btn{background:rgba(242,216,198,.1);color:#F2D8C6;border:1px solid rgba(242,216,198,.28)}
+.tier-deep .tier-book-btn:hover{background:rgba(242,216,198,.22)}
+.tier-deep .price-val{color:#fff}
+
+.tier-glow .tier-name-text{color:#7FD9C5}
+.tier-glow .tier-bullet{background:rgba(127,217,197,.14);color:#7FD9C5}
+.tier-glow .tier-book-btn{background:rgba(127,217,197,.1);color:#7FD9C5;border:1px solid rgba(127,217,197,.28)}
+.tier-glow .tier-book-btn:hover{background:rgba(127,217,197,.22)}
+.tier-glow .price-val{color:#fff}
+
+.tier-vip .tier-name-text{color:var(--red)}
+.tier-vip .tier-bullet{background:rgba(227,24,55,.14);color:var(--red)}
+.tier-vip .tier-book-btn{background:var(--red);color:#fff;border:1px solid var(--red)}
+.tier-vip .tier-book-btn:hover{background:var(--red-d)}
+.tier-vip .price-val{color:#fff}
+.tier-vip{border:1px solid rgba(227,24,55,.35)}
+.tier-vip:hover{border-color:rgba(227,24,55,.6);box-shadow:0 24px 60px rgba(227,24,55,.18)}
+
+.tier-pricing{
+  display:flex;gap:24px;padding:16px 0;margin-bottom:18px;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.price-block{display:flex;flex-direction:column;gap:4px}
+.price-lbl{
+  font-size:.65rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:#666;
+  display:flex;align-items:center;gap:6px;
+}
 .ar-mode .price-lbl{letter-spacing:0;text-transform:none}
+.price-lbl svg{width:14px;height:14px;color:#888}
 .price-val{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:2rem;line-height:1;color:#fff;
+  font-size:1.9rem;line-height:1;color:#fff;
 }
-.ar-mode .price-val{font-style:normal;font-family:'Cairo',sans-serif !important;font-size:1.7rem}
-.feat-list{list-style:none;padding:0;margin:0 0 24px;flex:1;display:flex;flex-direction:column;gap:9px}
-.feat{display:flex;align-items:flex-start;gap:8px;font-size:.83rem;color:#999;line-height:1.5}
-.feat-bullet{width:14px;height:14px;border-radius:3px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center}
-.tier-silver .feat-bullet{background:rgba(200,200,200,.12);color:#C8C8C8}
-.tier-golden .feat-bullet{background:rgba(212,175,55,.12);color:#D4AF37}
-.tier-vip .feat-bullet{background:rgba(227,24,55,.12);color:#E31837}
-.feat-bullet svg{width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:2.5}
+.ar-mode .price-val{font-style:normal;font-size:1.6rem}
+.price-val .currency{font-size:.7em;opacity:.7;margin-right:.15em;font-weight:700}
+
+.feat-list{list-style:none;padding:0;margin:0 0 22px;flex:1;display:flex;flex-direction:column;gap:10px}
+.feat{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:rgba(255,255,255,.7);line-height:1.55}
+.tier-bullet{
+  width:18px;height:18px;border-radius:4px;
+  flex-shrink:0;margin-top:1px;
+  display:flex;align-items:center;justify-content:center;
+}
+.tier-bullet svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
 .tier-book-btn{
-  display:block;width:100%;padding:12px;text-align:center;text-decoration:none;
+  display:block;width:100%;padding:14px;text-align:center;text-decoration:none;
   font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
   font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;
-  border:none;cursor:pointer;border-radius:4px;transition:opacity .15s,transform .12s;
+  cursor:pointer;border-radius:6px;
+  transition:opacity .15s,transform .12s,background .15s;
 }
-.ar-mode .tier-book-btn{font-style:normal;font-family:'Cairo',sans-serif !important;letter-spacing:0}
+.ar-mode .tier-book-btn{font-style:normal;letter-spacing:0}
 .tier-book-btn:active{transform:scale(.98)}
-.tier-silver .tier-book-btn{background:rgba(200,200,200,.1);color:#C8C8C8;border:1px solid rgba(200,200,200,.2)}
-.tier-silver .tier-book-btn:hover{background:rgba(200,200,200,.18)}
-.tier-golden .tier-book-btn{background:rgba(212,175,55,.1);color:#D4AF37;border:1px solid rgba(212,175,55,.25)}
-.tier-golden .tier-book-btn:hover{background:rgba(212,175,55,.2)}
-.tier-vip .tier-book-btn{background:#E31837;color:#fff}
-.tier-vip .tier-book-btn:hover{background:#B80E2C}
 
-/* ── New tier color variants ─────────────────────────────── */
-.tier-steam .tier-color-bar{background:linear-gradient(to right,#2a6a8a,#4BA3C3,#2a6a8a)}
-.tier-steam .tier-name-text{color:#4BA3C3}
-.tier-steam .feat-bullet{background:rgba(75,163,195,.12);color:#4BA3C3}
-.tier-steam .tier-book-btn{background:rgba(75,163,195,.1);color:#4BA3C3;border:1px solid rgba(75,163,195,.25)}
-.tier-steam .tier-book-btn:hover{background:rgba(75,163,195,.2)}
-.tier-machine-vip .tier-color-bar{background:linear-gradient(to right,#6b1010,#C0392B,#6b1010)}
-.tier-machine-vip .tier-name-text{color:#C0392B}
-.tier-machine-vip .feat-bullet{background:rgba(192,57,43,.12);color:#C0392B}
-.tier-machine-vip .tier-book-btn{background:rgba(192,57,43,.1);color:#C0392B;border:1px solid rgba(192,57,43,.25)}
-.tier-machine-vip .tier-book-btn:hover{background:rgba(192,57,43,.2)}
-.tier-glow .tier-color-bar{background:linear-gradient(to right,#1a5c3a,#2E8B57,#1a5c3a)}
-.tier-glow .tier-name-text{color:#2E8B57}
-.tier-glow .feat-bullet{background:rgba(46,139,87,.12);color:#2E8B57}
-.tier-glow .tier-book-btn{background:rgba(46,139,87,.1);color:#2E8B57;border:1px solid rgba(46,139,87,.25)}
-.tier-glow .tier-book-btn:hover{background:rgba(46,139,87,.2)}
-
-/* ── Monthly Packages (dark) ─────────────────────────────── */
-.monthly-section{background:#0C0C0C;padding:88px 24px;border-top:1px solid #222}
-.monthly-inner{max-width:1200px;margin:0 auto}
-.monthly-layout{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
-@media(min-width:900px){.monthly-layout{grid-template-columns:1fr 1fr}}
-.monthly-visual{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-.monthly-visual img{width:100%;display:block}
-.monthly-tables{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:500px){.monthly-tables{grid-template-columns:1fr 1fr}}
-.monthly-table{background:#141414;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-.monthly-table-head{background:#E31837;padding:12px 16px;display:flex;align-items:center;gap:8px}
-.monthly-table-icon{font-size:1.1rem}
-.monthly-table-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;font-size:1rem;color:#fff;letter-spacing:.04em}
-.ar-mode .monthly-table-label{font-style:normal;font-family:'Cairo',sans-serif !important;letter-spacing:0}
-.monthly-row{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-.monthly-row:last-child{border-bottom:none}
-.monthly-visits{font-size:.83rem;color:#888;font-weight:500}
-.monthly-price{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:1.25rem;color:#fff}
-.ar-mode .monthly-price{font-style:normal;font-family:'Cairo',sans-serif !important}
-.monthly-addons{background:#141414;border-radius:8px;border:1px solid rgba(255,255,255,.08);padding:16px;margin-top:4px}
-.monthly-addon-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#555;margin-bottom:10px}
-.ar-mode .monthly-addon-title{letter-spacing:0}
-.monthly-addon-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.monthly-addon-row:last-child{border-bottom:none}
-.monthly-addon-name{font-size:.83rem;color:#888}
-.monthly-addon-price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:1rem;color:#E31837}
-.ar-mode .monthly-addon-price{font-style:normal;font-family:'Cairo',sans-serif !important}
-
-/* ── Testimonials (dark) ──────────────────────────────────── */
-.testimonials-section{background:#0C0C0C;padding:88px 24px;border-top:1px solid #222}
-.testimonials-inner{max-width:1200px;margin:0 auto}
-.testimonials-layout{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
-@media(min-width:900px){.testimonials-layout{grid-template-columns:300px 1fr}}
-.testimonials-graphic{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);display:none}
-@media(min-width:900px){.testimonials-graphic{display:block}}
-.testimonials-graphic img{width:100%;display:block}
-.testimonials-grid{display:grid;grid-template-columns:1fr;gap:16px}
-.testimonial-card{background:#141414;border-radius:8px;padding:24px;border:1px solid rgba(255,255,255,.07);border-left:3px solid #E31837;transition:background .2s}
-[dir="rtl"] .testimonial-card{border-left:none;border-right:3px solid #E31837}
-.testimonial-card:hover{background:#1a1a1a}
-.stars{display:flex;gap:3px;margin-bottom:12px}
-.star{color:#F5C842;font-size:1rem}
-.testimonial-text{font-size:.88rem;line-height:1.75;color:#aaa;margin:0 0 14px;font-style:italic}
-.ar-mode .testimonial-text{font-style:normal;font-family:'Cairo',sans-serif !important;font-size:.92rem}
-.testimonial-time{font-size:.72rem;color:#444;font-weight:600}
-
-/* ── Results gallery grid ─────────────────────────────────── */
-.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-@media(min-width:640px){.ba-grid{grid-template-columns:repeat(3,1fr)}}
-.ba-grid-item{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08);aspect-ratio:1/1}
-.ba-grid-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.ba-grid-item:hover img{transform:scale(1.04)}
-.ba-grid-item.wide{grid-column:span 2}
-@media(min-width:640px){.ba-grid-item.wide{grid-column:span 1}}
-
-/* ── Extras (light) ──────────────────────────────────────── */
-.extras-section{background:#F2EEE8;padding:88px 24px}
-.extras-inner{max-width:1200px;margin:0 auto}
-.extras-grid{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:640px){.extras-grid{grid-template-columns:repeat(3,1fr)}}
-.ext-card{
-  background:#fff;border:1px solid #E5E5E5;border-radius:8px;
-  padding:32px 24px;border-top:4px solid #E31837;
-  transition:transform .2s,box-shadow .2s;
+.tier-addon{
+  display:flex;align-items:center;gap:8px;margin-top:12px;
+  padding:10px 12px;border-radius:6px;
+  background:rgba(255,255,255,.03);
+  border:1px dashed rgba(255,255,255,.1);
+  font-size:.78rem;color:#888;line-height:1.4;
 }
-.ext-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
-.ext-icon{font-size:2rem;margin-bottom:14px;display:block}
-.ext-t{font-size:1.05rem;font-weight:700;color:#0C0C0C;margin:0 0 8px}
-.ext-d{font-size:.85rem;line-height:1.65;color:#666;margin:0 0 20px}
-.ext-link{
+.tier-addon strong{color:#ccc;font-weight:600}
+
+/* ──────────────────────────────────────────────────────────
+   MONTHLY PLANS
+   ────────────────────────────────────────────────────────── */
+.plans-grid{
+  display:grid;grid-template-columns:1fr;gap:24px;
+}
+@media(min-width:760px){.plans-grid{grid-template-columns:repeat(2,1fr)}}
+.plan-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+}
+.plan-head{
+  padding:24px 28px;
+  background:var(--ink);color:#fff;
+  display:flex;align-items:center;gap:16px;
+  border-bottom:3px solid var(--red);
+}
+.plan-icon{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);flex-shrink:0;
+}
+.plan-icon svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.plan-titles{display:flex;flex-direction:column;gap:2px}
+.plan-cat{
   font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
-  font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;
-  color:#E31837;text-decoration:none;display:inline-flex;align-items:center;gap:5px;
-  transition:gap .15s;
+  font-size:.72rem;letter-spacing:.12em;color:rgba(255,255,255,.55);text-transform:uppercase;
 }
-.ar-mode .ext-link{font-style:normal;letter-spacing:0}
-.ext-link:hover{gap:9px}
-.ext-link::after{content:'→';display:inline}
-[dir="rtl"] .ext-link::after{content:'←'}
+.ar-mode .plan-cat{font-style:normal;letter-spacing:0}
+.plan-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+  font-size:1.5rem;color:#fff;text-transform:uppercase;line-height:1;
+}
+.ar-mode .plan-name{font-style:normal}
+.plan-rows{padding:8px 0}
+.plan-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;
+  border-bottom:1px solid var(--line);
+}
+.plan-row:last-child{border-bottom:none}
+.plan-visits{
+  display:flex;align-items:center;gap:10px;
+  font-size:.9rem;color:#333;font-weight:500;
+}
+.plan-visits-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+  font-size:1.3rem;color:var(--ink);min-width:28px;
+}
+.ar-mode .plan-visits-num{font-style:normal}
+.plan-price{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+  font-size:1.35rem;color:var(--red);
+}
+.ar-mode .plan-price{font-style:normal}
+.plan-price .currency{font-size:.7em;opacity:.7;margin-right:.15em;font-weight:700}
+.plan-savings{
+  font-size:.65rem;font-weight:700;color:#22a558;
+  background:rgba(34,165,88,.08);padding:2px 7px;border-radius:3px;
+  letter-spacing:.04em;text-transform:uppercase;margin-left:8px;
+}
+.ar-mode .plan-savings{letter-spacing:0}
+.plan-foot{
+  padding:16px 28px;background:#FBFBFB;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-top:1px solid var(--line);flex-wrap:wrap;
+}
+.plan-foot-note{font-size:.78rem;color:#666}
 
-/* ── Results (dark) ──────────────────────────────────────── */
-.results-section{background:#0C0C0C;padding:88px 24px}
-.results-inner{max-width:1200px;margin:0 auto}
+.addon-strip{
+  margin-top:32px;padding:20px 24px;
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  display:flex;gap:16px;flex-wrap:wrap;align-items:center;
+}
+.addon-strip-label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+  font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:#666;
+}
+.ar-mode .addon-strip-label{font-style:normal;letter-spacing:0}
+.addon-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 12px;border-radius:999px;
+  background:#F5F5F5;border:1px solid var(--line);
+  font-size:.8rem;color:#333;
+}
+.addon-pill-price{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+  color:var(--red);font-size:.95rem;
+}
+.ar-mode .addon-pill-price{font-style:normal}
+
+/* ──────────────────────────────────────────────────────────
+   BEFORE / AFTER GALLERY
+   ────────────────────────────────────────────────────────── */
+.ba-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+@media(min-width:680px){.ba-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){
+  .ba-grid{
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:1fr;
+  }
+  .ba-frame.wide{grid-column:span 2}
+}
 .ba-frame{
-  border-radius:8px;overflow:hidden;
-  border:1px solid rgba(255,255,255,.1);
-  box-shadow:0 0 0 1px rgba(227,24,55,.15);
+  position:relative;
+  border-radius:10px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0a0a0a;
+  aspect-ratio:1;
 }
-.ba-frame img{width:100%;display:block}
+.ba-frame.wide{aspect-ratio:2/1}
+.ba-frame img{width:100%;height:100%;object-fit:cover;display:block;object-position:center}
+.ba-frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 30%);
+  pointer-events:none;
+}
+.ba-caption{
+  position:absolute;left:14px;bottom:12px;z-index:1;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+  text-transform:uppercase;color:#fff;font-size:.85rem;letter-spacing:.08em;
+}
+.ar-mode .ba-caption{font-style:normal;letter-spacing:0}
 
-/* ── How it works (light) ────────────────────────────────── */
-.how-section{background:#FAFAFA;padding:88px 24px}
-.how-inner{max-width:1200px;margin:0 auto}
-.how-steps{display:grid;grid-template-columns:1fr;gap:0;position:relative}
-@media(min-width:640px){.how-steps{grid-template-columns:repeat(3,1fr)}}
-.step-card{padding:32px 28px;border:1px solid #E5E5E5;border-radius:0;background:#fff;margin:-1px 0 0 -1px}
-.step-card:first-child{border-top-left-radius:8px}
-.step-card:nth-child(3){border-top-right-radius:8px}
+/* ──────────────────────────────────────────────────────────
+   TESTIMONIALS
+   ────────────────────────────────────────────────────────── */
+.testimonials-grid{
+  display:grid;grid-template-columns:1fr;gap:20px;
+}
+@media(min-width:760px){.testimonials-grid{grid-template-columns:repeat(3,1fr)}}
+.tm-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:32px 28px;
+  display:flex;flex-direction:column;gap:18px;
+  position:relative;
+}
+.tm-stars{display:flex;gap:3px;color:#E0B544}
+.tm-stars svg{width:16px;height:16px;fill:currentColor}
+.tm-quote{
+  font-size:1rem;line-height:1.7;color:#333;
+  margin:0;font-style:italic;
+  flex:1;
+}
+.ar-mode .tm-quote{font-style:normal;font-size:1.05rem}
+.tm-quote::before{
+  content:'"';font-family:Georgia,serif;
+  font-size:3rem;line-height:.8;
+  color:var(--red);opacity:.3;
+  position:absolute;top:14px;right:24px;
+}
+[dir="rtl"] .tm-quote::before{right:auto;left:24px}
+.tm-author{
+  display:flex;align-items:center;gap:12px;
+  border-top:1px solid var(--line);padding-top:16px;
+}
+.tm-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,#E31837 0%, #B80E2C 100%);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:.92rem;
+  font-family:'Barlow Condensed',sans-serif;font-style:italic;
+  flex-shrink:0;
+}
+.ar-mode .tm-avatar{font-style:normal}
+.tm-meta{display:flex;flex-direction:column;gap:1px;line-height:1.2}
+.tm-name{font-weight:700;font-size:.9rem;color:var(--ink)}
+.tm-platform{font-size:.72rem;color:#888;display:flex;align-items:center;gap:5px}
+.tm-platform svg{width:11px;height:11px}
+
+/* ──────────────────────────────────────────────────────────
+   HOW IT WORKS
+   ────────────────────────────────────────────────────────── */
+.how-steps{
+  display:grid;grid-template-columns:1fr;gap:16px;
+  position:relative;
+}
+@media(min-width:720px){.how-steps{grid-template-columns:repeat(3,1fr)}}
+.step-card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:36px 32px;border-radius:10px;
+  position:relative;
+}
 .step-num-big{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:5rem;color:#E31837;line-height:.9;margin-bottom:16px;
-  opacity:.9;
+  font-size:4.5rem;color:var(--red);line-height:.9;margin-bottom:14px;
+  opacity:.92;letter-spacing:-.02em;
 }
-.ar-mode .step-num-big{font-style:normal;font-family:'Cairo',sans-serif !important}
-.step-t{font-size:1.05rem;font-weight:700;color:#0C0C0C;margin:0 0 10px}
-.step-d{font-size:.87rem;line-height:1.7;color:#666;margin:0}
+.ar-mode .step-num-big{font-style:normal;letter-spacing:0}
+.step-icon{
+  position:absolute;top:32px;right:32px;
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(227,24,55,.08);border:1px solid rgba(227,24,55,.2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);
+}
+[dir="rtl"] .step-icon{right:auto;left:32px}
+.step-icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step-t{font-size:1.15rem;font-weight:700;color:var(--ink);margin:0 0 10px}
+.step-d{font-size:.92rem;line-height:1.7;color:var(--muted);margin:0}
 
-/* ── Loyalty (dark) ─────────────────────────────────────── */
-.loyalty-section{background:#0C0C0C;padding:88px 24px}
-.loyalty-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
-@media(min-width:820px){.loyalty-inner{grid-template-columns:1fr 1fr}}
-.loy-stamps-wrap{display:flex;flex-wrap:wrap;gap:10px}
+/* ──────────────────────────────────────────────────────────
+   LOYALTY
+   ────────────────────────────────────────────────────────── */
+.loyalty-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+}
+@media(min-width:880px){.loyalty-inner{grid-template-columns:1fr 1.05fr;gap:64px}}
+.loy-stamps-wrap{display:flex;flex-wrap:wrap;gap:12px}
 .stamp-box{
-  width:72px;height:72px;border-radius:8px;border:1px solid rgba(255,255,255,.1);
-  background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  transition:transform .2s;cursor:default;
+  width:84px;height:84px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.1);
+  background:var(--ink-3);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:transform .2s,border-color .2s;cursor:default;
+  position:relative;
 }
-.stamp-box:hover{transform:scale(1.08)}
-.stamp-box svg{width:24px;height:24px;stroke:rgba(255,255,255,.25);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:5px}
-.stamp-box-lbl{font-size:.58rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#444;text-align:center;line-height:1.2}
-.stamp-free-box{background:rgba(227,24,55,.1);border-color:rgba(227,24,55,.4)}
-.stamp-free-box svg{stroke:#E31837;opacity:.9}
-.stamp-free-box .stamp-box-lbl{color:#E31837}
-.loy-note{font-size:.82rem;line-height:1.65;color:#555;margin-top:20px}
+.stamp-box:hover{transform:scale(1.05);border-color:rgba(255,255,255,.2)}
+.stamp-box svg{width:26px;height:26px;stroke:rgba(255,255,255,.3);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px}
+.stamp-box-lbl{
+  font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:#555;text-align:center;line-height:1.2;
+}
+.ar-mode .stamp-box-lbl{letter-spacing:0}
+.stamp-free-box{background:rgba(227,24,55,.1);border-color:rgba(227,24,55,.45);box-shadow:0 0 24px rgba(227,24,55,.18)}
+.stamp-free-box svg{stroke:var(--red);opacity:1;fill:rgba(227,24,55,.1)}
+.stamp-free-box .stamp-box-lbl{color:var(--red)}
+.loy-note{font-size:.82rem;line-height:1.65;color:#555;margin-top:18px}
 
-/* ── Book / CTA (red) ───────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────
+   BOOK / CTA
+   ────────────────────────────────────────────────────────── */
 .book-section{
-  background:#E31837;padding:88px 24px;
+  background:var(--red);
+  padding:100px 24px;
   position:relative;overflow:hidden;
 }
 .book-section::before{
-  content:'BOOK';
-  position:absolute;right:-20px;top:50%;transform:translateY(-50%);
+  content:'BOOK NOW';
+  position:absolute;right:-30px;top:50%;transform:translateY(-50%);
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:min(22vw,180px);color:rgba(0,0,0,.08);line-height:1;
-  pointer-events:none;white-space:nowrap;
+  font-size:min(24vw,200px);color:rgba(0,0,0,.08);line-height:1;
+  pointer-events:none;white-space:nowrap;letter-spacing:-.02em;
 }
-.book-inner{max-width:880px;margin:0 auto;position:relative;z-index:1}
+[dir="rtl"] .book-section::before{right:auto;left:-30px}
+.book-inner{max-width:920px;margin:0 auto;position:relative;z-index:1}
 .book-headline{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  text-transform:uppercase;font-size:clamp(3rem,10vw,6.5rem);
-  line-height:.9;color:#fff;margin:0 0 20px;letter-spacing:-.01em;
+  text-transform:uppercase;font-size:clamp(2.6rem,9vw,5.5rem);
+  line-height:.92;color:#fff;margin:0 0 22px;letter-spacing:-.012em;
 }
 .ar-mode .book-headline{
-  font-style:normal;font-family:'Cairo',sans-serif !important;
-  font-size:clamp(2.2rem,8vw,5rem);line-height:1.1;
+  font-style:normal;font-size:clamp(2rem,7vw,4.4rem);line-height:1.1;
 }
-.book-lede{font-size:1rem;color:rgba(255,255,255,.8);margin:0 0 36px;max-width:480px;line-height:1.7}
+.book-lede{font-size:1.05rem;color:rgba(255,255,255,.85);margin:0 0 36px;max-width:520px;line-height:1.7}
 
-/* ── Footer ─────────────────────────────────────────────── */
-footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
-.foot-row{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
-@media(min-width:820px){.foot-row{flex-direction:row;justify-content:space-between;align-items:center}}
-.foot-brand img{height:38px;width:auto;display:block}
-.foot-tag{font-size:.82rem;color:#444;margin-top:5px}
-.ar-mode .foot-tag{font-family:'Cairo',sans-serif !important}
-.foot-links{display:flex;gap:18px;flex-wrap:wrap}
-.foot-links a{font-size:.8rem;color:#555;text-decoration:none;transition:color .15s}
-.foot-links a:hover{color:#E31837}
-.ar-mode .foot-links a{font-family:'Cairo',sans-serif !important}
-.foot-copy{font-size:.75rem;color:#333}
-.ar-mode .foot-copy{font-family:'Cairo',sans-serif !important}
+/* ──────────────────────────────────────────────────────────
+   FOOTER
+   ────────────────────────────────────────────────────────── */
+footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 32px;color:#fff}
+.foot-row{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+@media(min-width:880px){.foot-row{flex-direction:row;justify-content:space-between;align-items:flex-start}}
+.foot-brand{max-width:320px}
+.foot-brand img{height:48px;width:auto;display:block;margin-bottom:14px}
+.foot-tag{font-size:.85rem;color:#888;line-height:1.6}
+.foot-cols{display:flex;gap:48px;flex-wrap:wrap}
+.foot-col{display:flex;flex-direction:column;gap:8px;min-width:130px}
+.foot-col-t{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);
+  margin-bottom:6px;
+}
+.ar-mode .foot-col-t{font-style:normal;letter-spacing:0}
+.foot-col a{color:#aaa;text-decoration:none;font-size:.88rem;transition:color .15s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{
+  max-width:1280px;margin:32px auto 0;
+  padding-top:24px;border-top:1px solid rgba(255,255,255,.06);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-size:.75rem;color:#555;
+}
 
-/* ── Floating FAB ───────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────
+   FLOATING FAB
+   ────────────────────────────────────────────────────────── */
 .fab-group{position:fixed;bottom:24px;right:24px;z-index:40}
 [dir="rtl"] .fab-group{right:auto;left:24px}
 .fab-wa-pill{
   display:flex;align-items:center;gap:10px;
-  padding:8px 20px 8px 8px;
+  padding:8px 22px 8px 8px;
   border-radius:999px;text-decoration:none;
   background:#fff;border:2px solid #25D366;
   box-shadow:0 6px 28px rgba(0,0,0,.22),0 2px 8px rgba(37,211,102,.18);
@@ -548,33 +876,79 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
 .fab-wa-pill:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(0,0,0,.28),0 4px 16px rgba(37,211,102,.28)}
 .fab-wa-pill:active{transform:scale(.97)}
 .fab-wa-icon{
-  width:38px;height:38px;border-radius:50%;
+  width:40px;height:40px;border-radius:50%;
   background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.fab-wa-icon svg{width:20px;height:20px}
+.fab-wa-icon svg{width:22px;height:22px}
 .fab-wa-text{display:flex;flex-direction:column;gap:1px}
 .fab-wa-label{
   font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
-  font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:#0C0C0C;line-height:1.1;
+  font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);line-height:1.1;
 }
 .fab-wa-sub{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;color:#999;line-height:1}
-.ar-mode .fab-wa-label,.ar-mode .fab-wa-sub{font-family:'Cairo',sans-serif !important;font-style:normal;letter-spacing:0}
+.ar-mode .fab-wa-label,.ar-mode .fab-wa-sub{font-style:normal;letter-spacing:0}
 @media(max-width:479px){
-  .fab-wa-pill{padding:7px 16px 7px 7px}
+  .fab-wa-pill{padding:7px 18px 7px 7px}
   .fab-wa-sub{display:none}
 }
 
-/* ── Reveal ─────────────────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+/* ── Reveal animations ────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   *{transition:none !important;animation:none !important}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 
-/* ── Focus ───────────────────────────────────────────────── */
-:focus-visible{outline:2px solid #E31837;outline-offset:3px}
+/* ── Monthly plans poster ──────────────────────────── */
+.plans-poster{
+  display:grid;grid-template-columns:1fr;gap:32px;
+  align-items:center;
+}
+@media(min-width:880px){
+  .plans-poster{grid-template-columns:minmax(280px,420px) 1fr;gap:56px}
+}
+.plans-poster-img{
+  border-radius:14px;overflow:hidden;
+  background:#0a0a0a;
+  box-shadow:0 20px 60px rgba(0,0,0,.18),0 0 0 1px rgba(0,0,0,.05);
+}
+.plans-poster-img img{width:100%;height:auto;display:block}
+.plans-poster-body{max-width:560px}
+.plans-poster-title{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+  text-transform:uppercase;font-size:clamp(1.8rem,4vw,2.6rem);
+  line-height:1;letter-spacing:-.01em;
+  margin:0 0 18px;color:var(--ink);
+}
+.ar-mode .plans-poster-title{font-style:normal;font-size:clamp(1.6rem,3.6vw,2.2rem);line-height:1.15}
+.plans-poster-lede{font-size:.98rem;color:#555;line-height:1.7;margin:0 0 24px}
+.plans-bullets{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:10px}
+.plans-bullets li{
+  position:relative;padding-left:24px;
+  font-size:.92rem;color:#333;line-height:1.5;
+}
+[dir="rtl"] .plans-bullets li{padding-left:0;padding-right:24px}
+.plans-bullets li::before{
+  content:'';position:absolute;left:0;top:.55em;
+  width:10px;height:10px;
+  background:var(--red);transform:rotate(45deg);
+}
+[dir="rtl"] .plans-bullets li::before{left:auto;right:0}
+.plans-bullets strong{color:var(--ink);font-weight:700}
+
+/* ── Diagonal divider accent ──────────────────────────── */
+.section-divider{
+  height:64px;background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.section-divider::before{
+  content:'';position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 24px, rgba(227,24,55,.04) 24px 25px);
+}
 </style>
 </head>
 
@@ -582,21 +956,23 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
 
 <!-- ═══ NAV ═══════════════════════════════════════════ -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
-  <a href="#" class="nav-brand" aria-label="Excellent Car Wash">
-    <img src="brand_assets/BF45A1B9-1DA0-491B-AACA-D6143DC995C9.PNG" alt="Excellent Car Wash logo">
+  <a href="#home" class="nav-brand" aria-label="Excellent Car Wash">
+    <img src="brand_assets/logo.png" alt="Excellent Car Wash logo">
     <span class="nav-brand-name" data-i18n="nav-brand-name">Excellent Car Wash</span>
   </a>
 
   <ul class="nav-links" role="list">
-    <li><a href="#services" data-i18n="nav-services">Services</a></li>
+    <li><a href="#packages" data-i18n="nav-packages">Packages</a></li>
+    <li><a href="#plans" data-i18n="nav-plans">Monthly</a></li>
     <li><a href="#results" data-i18n="nav-results">Results</a></li>
+    <li><a href="#reviews" data-i18n="nav-reviews">Reviews</a></li>
     <li><a href="#loyalty" data-i18n="nav-loyalty">Loyalty</a></li>
     <li><a href="#book" data-i18n="nav-contact">Contact</a></li>
   </ul>
 
   <div class="nav-right">
     <button id="langToggle" class="lang-btn" aria-label="Toggle language">العربية</button>
-    <a id="navCta" href="https://wa.me/97338898886?text=Hello%2C+I+want+to+book+a+wash" class="btn btn-red" style="padding:9px 16px;font-size:13px" target="_blank" rel="noopener">
+    <a id="navCta" href="https://wa.me/97338898886?text=Hello%2C+I+want+to+book+a+wash" class="btn btn-red btn-sm" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.554 4.107 1.523 5.827L.057 23.854a.5.5 0 0 0 .608.61l6.174-1.618A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.52-5.168-1.424l-.369-.22-3.825 1.003 1.018-3.71-.242-.384A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       <span data-i18n="nav-book">Book Now</span>
     </a>
@@ -606,11 +982,12 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
   </div>
 </nav>
 
-<!-- Mobile nav -->
 <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
   <ul class="mobile-nav-links" role="list">
-    <li><a href="#services" data-i18n="mnav-services">Services</a></li>
+    <li><a href="#packages" data-i18n="mnav-packages">Packages</a></li>
+    <li><a href="#plans" data-i18n="mnav-plans">Monthly Plans</a></li>
     <li><a href="#results" data-i18n="mnav-results">Results</a></li>
+    <li><a href="#reviews" data-i18n="mnav-reviews">Reviews</a></li>
     <li><a href="#loyalty" data-i18n="mnav-loyalty">Loyalty</a></li>
     <li><a href="#book" data-i18n="mnav-contact">Contact</a></li>
   </ul>
@@ -623,19 +1000,19 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
 </nav>
 
 <!-- ═══ HERO ════════════════════════════════════════════ -->
-<section class="hero" id="home">
-  <div class="hero-photo" role="img" aria-label="Before and after SUV car wash — Excellent Car Wash Bahrain"></div>
+<section class="hero" id="home" data-screen-label="01 Hero">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="hero-text reveal">
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-bar"></span>
-        <span class="hero-eyebrow-txt" data-i18n="hero-eyebrow">Mobile Car Wash · Bahrain</span>
+        <span class="hero-eyebrow-txt" data-i18n="hero-eyebrow">Mobile Detailing · Bahrain</span>
       </div>
       <h1 class="hero-headline">
         <span data-i18n="hero-h1-top">THE WASH</span><br>
         <span class="accent" data-i18n="hero-h1-bot">COMES TO YOU</span>
       </h1>
-      <p class="hero-lede" data-i18n="hero-lede">We drive our fully-equipped van to your home, office, or anywhere in Bahrain. Premium results, zero hassle.</p>
+      <p class="hero-lede" data-i18n="hero-lede">Our fully-equipped van pulls up to your home, office, or compound — steam-cleaning, hand polishing, and full detailing on-site. Premium results, zero hassle.</p>
       <div class="cta-row">
         <a id="heroWa" href="https://wa.me/97338898886?text=Hello%2C+I+want+to+book+a+wash" class="btn btn-wa" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.554 4.107 1.523 5.827L.057 23.854a.5.5 0 0 0 .608.61l6.174-1.618A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.52-5.168-1.424l-.369-.22-3.825 1.003 1.018-3.71-.242-.384A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -643,9 +1020,29 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
         </a>
         <a href="tel:+97338898886" class="btn btn-outline-white">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.02 4a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span data-i18n="hero-call">Call Now</span>
+          <span data-i18n="hero-call">38898886</span>
         </a>
       </div>
+
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <span class="hero-trust-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="hero-trust-text"><span class="hero-trust-t" data-i18n="hero-trust1-t">All of Bahrain</span><span class="hero-trust-d" data-i18n="hero-trust1-d">Service area</span></span>
+        </div>
+        <div class="hero-trust-item">
+          <span class="hero-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 4v10M5 12H2m20 0h-3M6.34 6.34L4.22 4.22m15.56 15.56l-2.12-2.12M6.34 17.66l-2.12 2.12M19.78 4.22l-2.12 2.12"/></svg></span>
+          <span class="hero-trust-text"><span class="hero-trust-t" data-i18n="hero-trust2-t">Steam-powered</span><span class="hero-trust-d" data-i18n="hero-trust2-d">Eco · waterless option</span></span>
+        </div>
+        <div class="hero-trust-item">
+          <span class="hero-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></span>
+          <span class="hero-trust-text"><span class="hero-trust-t" data-i18n="hero-trust3-t">5★ Rated</span><span class="hero-trust-d" data-i18n="hero-trust3-d">8,000+ followers</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap reveal" style="transition-delay:.15s">
+      <img src="brand_assets/van_clean.jpg" alt="Excellent Car Wash mobile detailing van — Hyundai Staria">
+      <div class="hero-photo-tag" data-i18n="hero-tag">Mobile Fleet · Hyundai Staria</div>
     </div>
   </div>
 </section>
@@ -658,12 +1055,12 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
       <div class="stat-lbl" data-i18n="stat-1-l">Followers</div>
     </div>
     <div class="stat-cell reveal" style="transition-delay:.07s">
-      <div class="stat-num" data-i18n="stat-2-n">126</div>
-      <div class="stat-lbl" data-i18n="stat-2-l">Posts</div>
+      <div class="stat-num" data-i18n="stat-2-n">7</div>
+      <div class="stat-lbl" data-i18n="stat-2-l">Packages</div>
     </div>
     <div class="stat-cell reveal" style="transition-delay:.14s">
-      <div class="stat-num" data-i18n="stat-3-n">2024</div>
-      <div class="stat-lbl" data-i18n="stat-3-l">Founded</div>
+      <div class="stat-num" data-i18n="stat-3-n">BD 7</div>
+      <div class="stat-lbl" data-i18n="stat-3-l">From / wash</div>
     </div>
     <div class="stat-cell reveal" style="transition-delay:.21s">
       <div class="stat-num" data-i18n="stat-4-n">100%</div>
@@ -673,424 +1070,341 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
 </div>
 
 <!-- ═══ WHY ══════════════════════════════════════════════ -->
-<section class="why-section" id="why">
-  <div class="why-inner">
-    <div class="reveal" style="margin-bottom:40px">
+<section class="section section-light" id="why" data-screen-label="02 Why us">
+  <div class="section-inner">
+    <div class="section-header reveal">
       <div class="section-label"><span class="label-bar"></span><span data-i18n="why-eyebrow">Why Excellent</span></div>
       <h2 class="d-title" data-i18n="why-title">THE DIFFERENCE</h2>
+      <p class="section-lede" data-i18n="why-lede">Most car washes ask you to drive to them. We come to you — fully equipped, trained, and ready to deliver showroom finish at your doorstep.</p>
     </div>
     <div class="why-grid">
       <div class="why-card reveal">
-        <div class="why-num">01</div>
+        <span class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7M21 16v5h-5M21 21l-7-7M3 8V3h5M3 3l7 7"/></svg></span>
+        <div class="why-num" data-i18n="why-1-n">01</div>
         <p class="why-t" data-i18n="why-1-t">We Come to You</p>
-        <p class="why-d" data-i18n="why-1-d">Home, office, or compound — our van arrives at your location. No driving, no waiting.</p>
+        <p class="why-d" data-i18n="why-1-d">Home, office, compound — anywhere in Bahrain. Our van arrives with water, power, and tools.</p>
       </div>
       <div class="why-card reveal" style="transition-delay:.1s">
-        <div class="why-num">02</div>
+        <span class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <div class="why-num" data-i18n="why-2-n">02</div>
         <p class="why-t" data-i18n="why-2-t">Steam Technology</p>
-        <p class="why-d" data-i18n="why-2-d">Professional steam equipment removes dirt, bacteria, and grime without excess water waste.</p>
+        <p class="why-d" data-i18n="why-2-d">Professional steam equipment lifts dirt, bacteria, and grime from interiors and AC vents — without flooding your car.</p>
       </div>
       <div class="why-card reveal" style="transition-delay:.2s">
-        <div class="why-num">03</div>
-        <p class="why-t" data-i18n="why-3-t">Trained Team</p>
-        <p class="why-d" data-i18n="why-3-d">Every detail handled by trained professionals using premium products only.</p>
+        <span class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M20 7L12 3 4 7l8 4 8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>
+        <div class="why-num" data-i18n="why-3-n">03</div>
+        <p class="why-t" data-i18n="why-3-t">Trained Specialists</p>
+        <p class="why-d" data-i18n="why-3-d">Every wash, polish and scratch correction handled by trained detailers using premium products only.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICES ══════════════════════════════════════════ -->
-<section class="services-section" id="services">
-  <div class="services-inner">
-    <div class="reveal" style="margin-bottom:40px">
-      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="svc-eyebrow">Our Packages</span></div>
-      <h2 class="d-title" style="color:#fff" data-i18n="svc-title">CHOOSE YOUR DETAIL</h2>
-      <p style="font-size:.9rem;color:#666;max-width:440px;margin-top:10px;line-height:1.65" data-i18n="svc-lede">Three tiers. One mission: leave your car spotless.</p>
+<!-- ═══ PACKAGES ══════════════════════════════════════════ -->
+<section class="section section-dark" id="packages" data-screen-label="03 Packages">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label"><span class="label-bar"></span><span data-i18n="pkg-eyebrow">Our Packages</span></div>
+      <h2 class="d-title" data-i18n="pkg-title">PICK YOUR FINISH</h2>
+      <p class="section-lede" data-i18n="pkg-lede">Seven packages, from a quick foam wash to a full multi-stage paint correction. All prices are flat — sedan vs SUV/Jeep. No surprise fees.</p>
     </div>
+
     <div class="tier-grid">
 
       <!-- SILVER -->
       <div class="tier-card tier-silver reveal">
         <div class="tier-img-wrap">
-          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.47.jpeg" alt="Silver foam washing service" loading="lazy">
+          <img src="brand_assets/p11.jpeg" data-img-en="brand_assets/p11.jpeg" data-img-ar="brand_assets/p01.jpeg" alt="Silver foam wash package" loading="lazy">
         </div>
-        <div class="tier-color-bar"></div>
         <div class="tier-body">
-          <p class="tier-name-text" data-i18n="silver-name">Silver</p>
-          <p class="tier-sub-text" data-i18n="silver-sub">Foam Washing</p>
-          <div class="tier-pricing">
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
-              <span class="price-val">BD 7</span>
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="silver-name">Silver</p>
+              <p class="tier-sub-text" data-i18n="silver-sub">Foam Washing</p>
             </div>
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
-              <span class="price-val">BD 10</span>
-            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>7<span class="sep">/</span><span class="currency">BD</span>10</span>
           </div>
-          <ul class="feat-list" role="list">
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="silver-f1">Foam car wash</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="silver-f2">Interior vacuuming &amp; cleaning</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="silver-f3">Tire &amp; wheel cleaning and polish</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="silver-f4">Waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="silver-f5">Car deodorizing</span></li>
-          </ul>
           <a id="silverCta" href="https://wa.me/97338898886?text=Hi%2C+Silver+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
         </div>
       </div>
 
-      <!-- GOLDEN -->
-      <div class="tier-card tier-golden reveal" style="transition-delay:.1s">
+      <!-- STEAM WASH -->
+      <div class="tier-card tier-steam reveal" style="transition-delay:.06s">
         <div class="tier-img-wrap">
-          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50.jpeg" alt="Golden hand polishing service" loading="lazy">
+          <img src="brand_assets/p14.jpeg" data-img-en="brand_assets/p14.jpeg" data-img-ar="brand_assets/p03.jpeg" alt="Steam washing package" loading="lazy">
         </div>
-        <div class="tier-color-bar"></div>
         <div class="tier-body">
-          <p class="tier-name-text" data-i18n="golden-name">Golden</p>
-          <p class="tier-sub-text" data-i18n="golden-sub">Quick Hand Polishing</p>
-          <div class="tier-pricing">
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
-              <span class="price-val">BD 11</span>
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="steam-name">Steam Wash</p>
+              <p class="tier-sub-text" data-i18n="steam-sub">Wet &amp; Dry Steam</p>
             </div>
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
-              <span class="price-val">BD 15</span>
-            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>10<span class="sep">/</span><span class="currency">BD</span>13</span>
           </div>
-          <ul class="feat-list" role="list">
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="golden-f1">Interior vacuuming &amp; cleaning</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="golden-f2">Foam wash</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="golden-f3">Hand polishing &amp; waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="golden-f4">Tire &amp; wheel cleaning and polish</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="golden-f5">Waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="golden-f6">Car deodorizing</span></li>
-          </ul>
+          <a href="https://wa.me/97338898886?text=Hi%2C+Steam+Wash+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+      <!-- GOLDEN -->
+      <div class="tier-card tier-golden reveal" style="transition-delay:.12s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/p16.jpeg" data-img-en="brand_assets/p16.jpeg" data-img-ar="brand_assets/p04.jpeg" alt="Golden hand polishing package" loading="lazy">
+        </div>
+        <div class="tier-body">
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="golden-name">Golden</p>
+              <p class="tier-sub-text" data-i18n="golden-sub">Quick Hand Polishing</p>
+            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>11<span class="sep">/</span><span class="currency">BD</span>15</span>
+          </div>
           <a id="goldenCta" href="https://wa.me/97338898886?text=Hi%2C+Golden+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
         </div>
       </div>
 
-      <!-- SUPER VIP -->
-      <div class="tier-card tier-vip reveal" style="transition-delay:.2s">
+      <!-- VIP MACHINE POLISH -->
+      <div class="tier-card tier-vippol reveal">
         <div class="tier-img-wrap">
-          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.48 (4).jpeg" alt="Super VIP comprehensive detailing service" loading="lazy">
+          <img src="brand_assets/p09.jpeg" data-img-en="brand_assets/p09.jpeg" data-img-ar="brand_assets/p07.jpeg" alt="VIP machine exterior polishing" loading="lazy">
         </div>
-        <div class="tier-color-bar"></div>
         <div class="tier-body">
-          <p class="tier-name-text" data-i18n="vip-name">Super VIP</p>
-          <p class="tier-sub-text" data-i18n="vip-sub">Comprehensive Detailing</p>
-          <div class="tier-pricing">
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
-              <span class="price-val">BD 40</span>
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="vippol-name">VIP Polish</p>
+              <p class="tier-sub-text" data-i18n="vippol-sub">Machine Exterior Polishing</p>
             </div>
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
-              <span class="price-val">BD 50</span>
-            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>20<span class="sep">/</span><span class="currency">BD</span>25</span>
           </div>
-          <ul class="feat-list" role="list">
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f1">Exterior wash with foam or steam</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f2">Interior cleaning with specialized products &amp; stain removal</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f3">Plastic trim polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f4">Heavy scratch removal polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f5">Medium polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f6">Fine polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f7">Waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f8">Tire polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f9">Car deodorizing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="vip-f10">AC vent &amp; steam sterilization</span></li>
-          </ul>
+          <a href="https://wa.me/97338898886?text=Hi%2C+VIP+Polish+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+      <!-- DEEP CLEANING -->
+      <div class="tier-card tier-deep reveal" style="transition-delay:.06s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/p10.jpeg" data-img-en="brand_assets/p10.jpeg" data-img-ar="brand_assets/p02.jpeg" alt="Deep cleaning interior package" loading="lazy">
+        </div>
+        <div class="tier-body">
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="deep-name">Deep Clean</p>
+              <p class="tier-sub-text" data-i18n="deep-sub">Seats &amp; Interior Detailing</p>
+            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>25<span class="sep">/</span><span class="currency">BD</span>30</span>
+          </div>
+          <a href="https://wa.me/97338898886?text=Hi%2C+Deep+Cleaning+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+      <!-- GLOW -->
+      <div class="tier-card tier-glow reveal" style="transition-delay:.12s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/p12.jpeg" data-img-en="brand_assets/p12.jpeg" data-img-ar="brand_assets/p06.jpeg" alt="GLOW paint correction package" loading="lazy">
+        </div>
+        <div class="tier-body">
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="glow-name">Glow</p>
+              <p class="tier-sub-text" data-i18n="glow-sub">Paint Correction &amp; Detail</p>
+            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>30<span class="sep">/</span><span class="currency">BD</span>40</span>
+          </div>
+          <a href="https://wa.me/97338898886?text=Hi%2C+GLOW+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
+        </div>
+      </div>
+
+      <!-- SUPER VIP -->
+      <div class="tier-card tier-vip reveal" style="transition-delay:.18s">
+        <div class="tier-img-wrap">
+          <img src="brand_assets/p15.jpeg" data-img-en="brand_assets/p15.jpeg" data-img-ar="brand_assets/p08.jpeg" alt="Super VIP comprehensive detailing" loading="lazy">
+        </div>
+        <div class="tier-body">
+          <div class="tier-head">
+            <div>
+              <p class="tier-name-text" data-i18n="vip-name">Super VIP</p>
+              <p class="tier-sub-text" data-i18n="vip-sub">Comprehensive Detailing</p>
+            </div>
+            <span class="tier-price-line"><span class="currency">BD</span>40<span class="sep">/</span><span class="currency">BD</span>50</span>
+          </div>
           <a id="vipCta" href="https://wa.me/97338898886?text=Hi%2C+Super+VIP+package+please" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
         </div>
       </div>
 
-      <!-- STEAM WASHING -->
-      <div class="tier-card tier-steam reveal" style="transition-delay:.1s">
-        <div class="tier-img-wrap">
-          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.49 (3).jpeg" alt="Steam washing package" loading="lazy">
-        </div>
-        <div class="tier-color-bar"></div>
-        <div class="tier-body">
-          <p class="tier-name-text" data-i18n="steam-name">Steam Wash</p>
-          <p class="tier-sub-text" data-i18n="steam-sub">Steam Washing Package</p>
-          <div class="tier-pricing">
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
-              <span class="price-val">BD 10</span>
-            </div>
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
-              <span class="price-val">BD 13</span>
-            </div>
-          </div>
-          <ul class="feat-list" role="list">
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f1">Exterior car wash with wet steam</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f2">Interior dry steam cleaning</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f3">AC vent sterilization with steam</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f4">Spray waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f5">Car perfume</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-f6">Tire &amp; wheel cleaning and polish</span></li>
-            <li class="feat" style="color:#666;font-size:.78rem"><span class="feat-bullet" style="background:rgba(75,163,195,.08);color:#3a7a96"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="steam-addon">Add-on: Engine steam cleaning +BD 5</span></li>
-          </ul>
-          <a id="steamCta" href="https://wa.me/97338898886?text=Steam+Washing+package+booking" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
-        </div>
-      </div>
-
-      <!-- MACHINE EXTERIOR POLISHING VIP -->
-      <div class="tier-card tier-machine-vip reveal" style="transition-delay:.2s">
-        <div class="tier-img-wrap">
-          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.48 (3).jpeg" alt="Machine exterior polishing VIP service" loading="lazy">
-        </div>
-        <div class="tier-color-bar"></div>
-        <div class="tier-body">
-          <p class="tier-name-text" data-i18n="machine-vip-name">Machine VIP</p>
-          <p class="tier-sub-text" data-i18n="machine-vip-sub">Machine Exterior Polishing</p>
-          <div class="tier-pricing">
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
-              <span class="price-val">BD 20</span>
-            </div>
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
-              <span class="price-val">BD 25</span>
-            </div>
-          </div>
-          <ul class="feat-list" role="list">
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f1">Foam car wash</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f2">Interior vacuuming &amp; cleaning</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f3">Gentle machine polishing of exterior</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f4">Plastic trim polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f5">Waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f6">Car deodorizing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="machine-vip-f7">Tire polishing</span></li>
-          </ul>
-          <a id="machineVipCta" href="https://wa.me/97338898886?text=Machine+VIP+polishing+booking" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
-        </div>
-      </div>
-
-      <!-- GLOW PACKAGE -->
-      <div class="tier-card tier-glow reveal" style="transition-delay:.3s">
-        <div class="tier-img-wrap">
-          <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.49 (1).jpeg" alt="Glow package comprehensive polishing" loading="lazy">
-        </div>
-        <div class="tier-color-bar"></div>
-        <div class="tier-body">
-          <p class="tier-name-text" data-i18n="glow-name">Glow</p>
-          <p class="tier-sub-text" data-i18n="glow-sub">Comprehensive Polish Package</p>
-          <div class="tier-pricing">
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-sedan">Sedan</span>
-              <span class="price-val">BD 30</span>
-            </div>
-            <div class="price-block">
-              <span class="price-lbl" data-i18n="svc-suv">SUV / Jeep</span>
-              <span class="price-val">BD 40</span>
-            </div>
-          </div>
-          <ul class="feat-list" role="list">
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f1">Exterior wash with foam or steam</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f2">Coarse polish &amp; scratch removal</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f3">Fine polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f4">Spray waxing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f5">Headlight polishing</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f6">Glass cleaning with special materials</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f7">Tire &amp; wheel cleaning and polish</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f8">Dashboard vacuuming &amp; cleaning</span></li>
-            <li class="feat"><span class="feat-bullet"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-f9">Car fragrance</span></li>
-            <li class="feat" style="color:#666;font-size:.78rem"><span class="feat-bullet" style="background:rgba(46,139,87,.08);color:#226644"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span><span data-i18n="glow-addon">Add-on: Engine cleaning +BD 5</span></li>
-          </ul>
-          <a id="glowCta" href="https://wa.me/97338898886?text=Glow+package+booking" class="tier-book-btn" target="_blank" rel="noopener" data-i18n="btn-book">Book This Package</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══ MONTHLY PACKAGES ══════════════════════════════════════ -->
-<section class="monthly-section" id="monthly">
-  <div class="monthly-inner">
-    <div class="reveal" style="margin-bottom:40px">
-      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="monthly-eyebrow">Save More</span></div>
-      <h2 class="d-title" style="color:#fff" data-i18n="monthly-title">MONTHLY PACKAGES</h2>
-      <p style="font-size:.9rem;color:#666;max-width:480px;margin-top:10px;line-height:1.65" data-i18n="monthly-lede">Subscribe monthly and save. Choose your visit count — we handle the rest.</p>
+<!-- ═══ MONTHLY PLANS ════════════════════════════════════ -->
+<section class="section section-warm" id="plans" data-screen-label="04 Monthly plans">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label"><span class="label-bar"></span><span data-i18n="plans-eyebrow">Monthly Subscriptions</span></div>
+      <h2 class="d-title" data-i18n="plans-title">REGULAR WASH, BETTER PRICE</h2>
+      <p class="section-lede" data-i18n="plans-lede">For cars that need to look sharp every week. Pre-pay for 4 / 6 / 8 / 12 visits a month and save up to <strong>40%</strong> per wash. Cancel anytime.</p>
     </div>
-    <div class="monthly-layout">
-      <div class="monthly-visual reveal">
-        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.47 (4).jpeg" alt="Excellent Car Wash Hyundai Staria mobile van — monthly subscription packages" loading="lazy">
+
+    <div class="plans-poster reveal">
+      <div class="plans-poster-img">
+        <img src="brand_assets/p13.jpeg" data-img-en="brand_assets/p13.jpeg" data-img-ar="brand_assets/p05.jpeg" alt="Monthly subscription packages" loading="lazy">
       </div>
-      <div class="reveal" style="transition-delay:.12s">
-        <div class="monthly-tables">
-          <div class="monthly-table">
-            <div class="monthly-table-head">
-              <span class="monthly-table-icon">🚗</span>
-              <span class="monthly-table-label" data-i18n="monthly-sedan-label">Sedan</span>
-            </div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v4">4 Visits</span><span class="monthly-price">BD 24</span></div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v6">6 Visits</span><span class="monthly-price">BD 30</span></div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v8">8 Visits</span><span class="monthly-price">BD 36</span></div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v12">12 Visits</span><span class="monthly-price">BD 42</span></div>
-          </div>
-          <div class="monthly-table">
-            <div class="monthly-table-head">
-              <span class="monthly-table-icon">🚙</span>
-              <span class="monthly-table-label" data-i18n="monthly-jeep-label">SUV / Jeep</span>
-            </div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v4">4 Visits</span><span class="monthly-price">BD 30</span></div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v6">6 Visits</span><span class="monthly-price">BD 36</span></div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v8">8 Visits</span><span class="monthly-price">BD 42</span></div>
-            <div class="monthly-row"><span class="monthly-visits" data-i18n="monthly-v12">12 Visits</span><span class="monthly-price">BD 50</span></div>
-          </div>
-        </div>
-        <div class="monthly-addons" style="margin-top:16px">
-          <div class="monthly-addon-title" data-i18n="monthly-addons-title">Optional Add-ons</div>
-          <div class="monthly-addon-row">
-            <span class="monthly-addon-name" data-i18n="monthly-addon-machine">Machine polish upgrade</span>
-            <span class="monthly-addon-price">+BD 10</span>
-          </div>
-          <div class="monthly-addon-row">
-            <span class="monthly-addon-name" data-i18n="monthly-addon-hand">Hand wax upgrade</span>
-            <span class="monthly-addon-price">+BD 5</span>
-          </div>
-        </div>
-        <div style="margin-top:24px">
-          <a id="monthlyCta" href="https://wa.me/97338898886?text=Monthly+subscription+enquiry" class="btn btn-red" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.554 4.107 1.523 5.827L.057 23.854a.5.5 0 0 0 .608.61l6.174-1.618A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.52-5.168-1.424l-.369-.22-3.825 1.003 1.018-3.71-.242-.384A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            <span data-i18n="monthly-cta">Subscribe Monthly</span>
-          </a>
+      <div class="plans-poster-body">
+        <h3 class="plans-poster-title" data-i18n="plans-poster-title">Subscribe &amp; Save up to 50%</h3>
+        <p class="plans-poster-lede" data-i18n="plans-poster-lede">Four monthly tiers for both small and large vehicles. Lock in your weekly wash routine and we'll come back automatically. All add-ons (machine polish, hand wax, engine steam) available on every visit.</p>
+        <ul class="plans-bullets">
+          <li data-i18n="plans-b1">Sedan from <strong>BD 24/mo</strong> (4 visits)</li>
+          <li data-i18n="plans-b2">SUV / Jeep from <strong>BD 30/mo</strong> (4 visits)</li>
+          <li data-i18n="plans-b3">12-visit tier saves up to <strong>50%</strong> per wash</li>
+          <li data-i18n="plans-b4">Cancel anytime · No long-term contract</li>
+        </ul>
+        <div class="cta-row">
+          <a href="https://wa.me/97338898886?text=Hi%2C+I+want+a+monthly+subscription" class="btn btn-red" target="_blank" rel="noopener" data-i18n="plan-cta">Subscribe via WhatsApp</a>
+          <a href="tel:+97338898886" class="btn btn-outline-dark" data-i18n="plan-call">Call to discuss</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ EXTRAS ════════════════════════════════════════════ -->
-<section class="extras-section" id="extras">
-  <div class="extras-inner">
-    <div class="reveal" style="margin-bottom:40px">
-      <div class="section-label"><span class="label-bar"></span><span data-i18n="ext-eyebrow">Also Available</span></div>
-      <h2 class="d-title" data-i18n="ext-title">BEYOND CARS</h2>
+<!-- ═══ BEFORE / AFTER ═══════════════════════════════════ -->
+<section class="section section-dark" id="results" data-screen-label="05 Results">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label"><span class="label-bar"></span><span data-i18n="res-eyebrow">The Proof</span></div>
+      <h2 class="d-title" data-i18n="res-title">BEFORE &amp; AFTER</h2>
+      <p class="section-lede" data-i18n="res-lede">Real customer cars. Real results. Engine bays, faded headlights, food-stained seats — every job documented.</p>
     </div>
-    <div class="extras-grid">
-      <div class="ext-card reveal">
-        <span class="ext-icon" aria-hidden="true">🏍</span>
-        <p class="ext-t" data-i18n="ext-bike-t">Bike Wash</p>
-        <p class="ext-d" data-i18n="ext-bike-d">Full wash and detail for motorcycles and bikes.</p>
-        <a id="bikeWa" href="https://wa.me/97338898886?text=Hi%2C+bike+wash+enquiry" class="ext-link" target="_blank" rel="noopener" data-i18n="ext-cta">Enquire on WhatsApp</a>
+
+    <div class="ba-grid">
+      <div class="ba-frame wide reveal">
+        <img src="brand_assets/p21.jpeg" alt="BMW engine bay before and after steam cleaning">
+        <span class="ba-caption" data-i18n="ba1">BMW Engine Bay · Steam Restoration</span>
       </div>
-      <div class="ext-card reveal" style="transition-delay:.1s">
-        <span class="ext-icon" aria-hidden="true">⛵</span>
-        <p class="ext-t" data-i18n="ext-boat-t">Boat Wash</p>
-        <p class="ext-d" data-i18n="ext-boat-d">Marine detailing and cleaning service.</p>
-        <a id="boatWa" href="https://wa.me/97338898886?text=Hi%2C+boat+wash+enquiry" class="ext-link" target="_blank" rel="noopener" data-i18n="ext-cta">Enquire on WhatsApp</a>
+      <div class="ba-frame reveal" style="transition-delay:.08s">
+        <img src="brand_assets/p19.jpeg" alt="Faded headlight restoration before and after">
+        <span class="ba-caption" data-i18n="ba2">Headlight Restoration</span>
       </div>
-      <div class="ext-card reveal" style="transition-delay:.2s">
-        <span class="ext-icon" aria-hidden="true">💧</span>
-        <p class="ext-t" data-i18n="ext-deep-t">Deep Wash</p>
-        <p class="ext-d" data-i18n="ext-deep-d">Intensive interior deep clean and conditioning.</p>
-        <a id="deepWa" href="https://wa.me/97338898886?text=Hi%2C+deep+wash+enquiry" class="ext-link" target="_blank" rel="noopener" data-i18n="ext-cta">Enquire on WhatsApp</a>
+      <div class="ba-frame reveal" style="transition-delay:.16s">
+        <img src="brand_assets/p20.jpeg" alt="Beige interior fabric seats before and after deep clean">
+        <span class="ba-caption" data-i18n="ba3">Fabric Seats Deep Clean</span>
+      </div>
+      <div class="ba-frame wide reveal" style="transition-delay:.24s">
+        <img src="brand_assets/p18.jpeg" alt="Stained rear seats before and after deep cleaning">
+        <span class="ba-caption" data-i18n="ba4">Stain Removal · Rear Bench</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ RESULTS ════════════════════════════════════════════ -->
-<section class="results-section" id="results">
-  <div class="results-inner">
-    <div class="reveal" style="margin-bottom:36px">
-      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="res-eyebrow">The Proof</span></div>
-      <h2 class="d-title" style="color:#fff" data-i18n="res-title">BEFORE &amp; AFTER</h2>
-      <p style="font-size:.9rem;color:#555;max-width:480px;margin-top:10px;line-height:1.65" data-i18n="res-lede">Engine bays, paint correction, interior restoration — we transform every vehicle we touch.</p>
+<!-- ═══ TESTIMONIALS ════════════════════════════════════ -->
+<section class="section section-light" id="reviews" data-screen-label="06 Reviews">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-label"><span class="label-bar"></span><span data-i18n="rev-eyebrow">What Clients Say</span></div>
+      <h2 class="d-title" data-i18n="rev-title">5-STAR REVIEWS</h2>
+      <p class="section-lede" data-i18n="rev-lede">Real WhatsApp messages from clients across Manama, Riffa, Saar, Muharraq and Hamad Town.</p>
     </div>
-    <div class="ba-grid reveal">
-      <div class="ba-grid-item wide">
-        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.51.jpeg" alt="BMW engine bay before and after — Excellent Car Wash" loading="lazy">
-      </div>
-      <div class="ba-grid-item">
-        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (2).jpeg" alt="Interior seats before and after cleaning" loading="lazy">
-      </div>
-      <div class="ba-grid-item">
-        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (3).jpeg" alt="Headlight restoration before and after" loading="lazy">
-      </div>
-      <div class="ba-grid-item">
-        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (4).jpeg" alt="Interior seats deep clean before and after" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
-<section class="testimonials-section" id="testimonials">
-  <div class="testimonials-inner">
-    <div class="reveal" style="margin-bottom:40px">
-      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="testi-eyebrow">Real Customers</span></div>
-      <h2 class="d-title" style="color:#fff" data-i18n="testi-title">WHAT THEY SAY</h2>
-      <p style="font-size:.85rem;color:#555;margin-top:8px" data-i18n="testi-sub">Real customer messages — Bahrain</p>
-    </div>
-    <div class="testimonials-layout">
-      <div class="testimonials-graphic">
-        <img src="brand_assets/WhatsApp Image 2026-05-13 at 16.09.50 (1).jpeg" alt="Customer testimonials for Excellent Car Wash Bahrain" loading="lazy">
-      </div>
-      <div class="testimonials-grid reveal" style="transition-delay:.1s">
-        <div class="testimonial-card">
-          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testimonial-text" lang="ar" dir="rtl">"ماشاءالله السيارة ولا أروع نظافة وريحة جميلة يعطيكم ألف عافيه ودايما اختار اكسيلنت كار واش 👌"</p>
-          <span class="testimonial-time">WhatsApp · 7:04 PM</span>
+    <div class="testimonials-grid">
+      <article class="tm-card reveal">
+        <div class="tm-stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
         </div>
-        <div class="testimonial-card">
-          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testimonial-text" lang="ar" dir="rtl">"ماشاءالله بدعتو السياره تبارك الله رجعت وكاله"</p>
-          <span class="testimonial-time">WhatsApp · 6:17 PM</span>
+        <p class="tm-quote" data-i18n="rev1">Car came back perfectly clean and smelling great. The crew is polite and on time. I'm a permanent client now — always Excellent Car Wash. 👌</p>
+        <div class="tm-author">
+          <span class="tm-avatar">A</span>
+          <span class="tm-meta">
+            <span class="tm-name" data-i18n="rev1-n">Ahmed M.</span>
+            <span class="tm-platform"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg><span data-i18n="rev-via">WhatsApp · 7:04 PM</span></span>
+          </span>
         </div>
-        <div class="testimonial-card">
-          <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testimonial-text" lang="ar" dir="rtl">"ماشاءالله وايد شغلكم نظيف و بروفشنل و السياره واايد نظيفه وحتى الريحه داخل السياره ممتازه، سوويت لكم دعاية خفيفه بعد ومب اخر تعامل ان شاء الله"</p>
-          <span class="testimonial-time">WhatsApp · 9:25 PM</span>
+      </article>
+
+      <article class="tm-card reveal" style="transition-delay:.1s">
+        <div class="tm-stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
         </div>
-      </div>
+        <p class="tm-quote" data-i18n="rev2">Outstanding service. The car looks brand new. They explained every step and were honest about what would and wouldn't come out. Highly recommended.</p>
+        <div class="tm-author">
+          <span class="tm-avatar">S</span>
+          <span class="tm-meta">
+            <span class="tm-name" data-i18n="rev2-n">Sara H.</span>
+            <span class="tm-platform"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg><span data-i18n="rev-via2">WhatsApp · 6:17 PM</span></span>
+          </span>
+        </div>
+      </article>
+
+      <article class="tm-card reveal" style="transition-delay:.2s">
+        <div class="tm-stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="tm-quote" data-i18n="rev3">Work is clean and professional. Interior is spotless and smells excellent. I'll definitely book again — no other place to deal with.</p>
+        <div class="tm-author">
+          <span class="tm-avatar">K</span>
+          <span class="tm-meta">
+            <span class="tm-name" data-i18n="rev3-n">Khalid R.</span>
+            <span class="tm-platform"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg><span data-i18n="rev-via3">WhatsApp · 9:25 PM</span></span>
+          </span>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ═══ HOW IT WORKS ══════════════════════════════════════ -->
-<section class="how-section" id="how">
-  <div class="how-inner">
-    <div class="reveal" style="margin-bottom:40px">
+<section class="section section-warm" id="how" data-screen-label="07 How it works">
+  <div class="section-inner">
+    <div class="section-header reveal">
       <div class="section-label"><span class="label-bar"></span><span data-i18n="how-eyebrow">It's Simple</span></div>
       <h2 class="d-title" data-i18n="how-title">HOW IT WORKS</h2>
     </div>
     <div class="how-steps">
       <div class="step-card reveal">
         <div class="step-num-big">01</div>
+        <span class="step-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></span>
         <p class="step-t" data-i18n="how-1-t">WhatsApp Us</p>
-        <p class="step-d" data-i18n="how-1-d">Send us your location, vehicle type, and preferred package.</p>
+        <p class="step-d" data-i18n="how-1-d">Send your location, car type and preferred package. We confirm in minutes.</p>
       </div>
       <div class="step-card reveal" style="transition-delay:.12s">
         <div class="step-num-big">02</div>
-        <p class="step-t" data-i18n="how-2-t">We Come to You</p>
-        <p class="step-d" data-i18n="how-2-d">Our van arrives at your location, equipped and ready.</p>
+        <span class="step-icon"><svg viewBox="0 0 24 24"><path d="M3 17h2.5l1.5-5h11l1.5 5H22M3 17l1-4M22 17l-1-4M5 17v3M19 17v3"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/></svg></span>
+        <p class="step-t" data-i18n="how-2-t">We Drive to You</p>
+        <p class="step-d" data-i18n="how-2-d">Our branded Hyundai Staria arrives fully equipped — water, power, steam, foam, polishing tools.</p>
       </div>
       <div class="step-card reveal" style="transition-delay:.24s">
         <div class="step-num-big">03</div>
-        <p class="step-t" data-i18n="how-3-t">Enjoy the Result</p>
-        <p class="step-d" data-i18n="how-3-d">Drive away spotless. Zero effort on your end.</p>
+        <span class="step-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+        <p class="step-t" data-i18n="how-3-t">Drive Away Spotless</p>
+        <p class="step-d" data-i18n="how-3-d">Showroom finish at your doorstep. Pay cash, card, or BenefitPay on the spot.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ LOYALTY ════════════════════════════════════════════ -->
-<section class="loyalty-section" id="loyalty">
+<section class="section section-dark" id="loyalty" data-screen-label="08 Loyalty">
   <div class="loyalty-inner">
     <div class="reveal">
-      <div class="section-label" style="color:#E31837"><span class="label-bar"></span><span data-i18n="loy-eyebrow">Loyalty Program</span></div>
-      <h2 class="d-title" style="color:#fff" data-i18n="loy-title">5 WASHES, 6TH FREE</h2>
-      <p style="font-size:.9rem;color:#666;max-width:440px;margin:12px 0 28px;line-height:1.65" data-i18n="loy-lede">Collect a stamp with every paid wash. Your 6th is on us.</p>
-      <a id="loyWa" href="https://wa.me/97338898886?text=I+want+a+loyalty+card" class="btn btn-red" target="_blank" rel="noopener">
-        <span data-i18n="loy-cta">Ask for Your Card</span>
-      </a>
-      <p style="font-size:.78rem;color:#444;margin-top:16px" data-i18n="loy-sub">Physical loyalty card — pick it up when you book your first wash.</p>
+      <div class="section-label"><span class="label-bar"></span><span data-i18n="loy-eyebrow">Loyalty Card</span></div>
+      <h2 class="d-title" data-i18n="loy-title">5 WASHES,<br>6<sup style="color:var(--red);font-size:.7em">th</sup> FREE</h2>
+      <p class="section-lede" data-i18n="loy-lede">Collect a stamp on every paid wash. Your sixth wash is on us. Physical loyalty card — ask for yours when you book.</p>
+      <div class="cta-row" style="margin-top:28px">
+        <a id="loyWa" href="https://wa.me/97338898886?text=I+want+a+loyalty+card" class="btn btn-red" target="_blank" rel="noopener">
+          <span data-i18n="loy-cta">Get Your Card</span>
+        </a>
+      </div>
+      <p class="loy-note" data-i18n="loy-sub">Card valid for all wash packages · One free wash up to BD 15 value</p>
     </div>
     <div class="reveal" style="transition-delay:.15s">
       <div class="loy-stamps-wrap" role="list" aria-label="5 washes, 6th free loyalty stamps">
@@ -1106,12 +1420,12 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
 </section>
 
 <!-- ═══ BOOK / CTA ══════════════════════════════════════════ -->
-<section class="book-section" id="book">
+<section class="book-section" id="book" data-screen-label="09 Book">
   <div class="book-inner">
     <div class="reveal">
-      <div class="section-label" style="color:rgba(255,255,255,.6)"><span style="display:block;width:28px;height:3px;background:rgba(255,255,255,.5);flex-shrink:0;border-radius:2px"></span><span data-i18n="cta-eyebrow">Ready?</span></div>
+      <div class="section-label" style="color:rgba(255,255,255,.7)"><span style="display:block;width:30px;height:3px;background:rgba(255,255,255,.6);flex-shrink:0;border-radius:2px"></span><span data-i18n="cta-eyebrow">Ready When You Are</span></div>
       <h2 class="book-headline" data-i18n="cta-title">BOOK YOUR WASH TODAY</h2>
-      <p class="book-lede" data-i18n="cta-lede">WhatsApp us or call directly. We cover all of Bahrain.</p>
+      <p class="book-lede" data-i18n="cta-lede">WhatsApp or call us. We cover all of Bahrain and most appointments are confirmed in minutes.</p>
       <div class="cta-row">
         <a id="bookWa" href="https://wa.me/97338898886?text=Hello%2C+I+want+to+book+a+wash" class="btn btn-outline-white" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.554 4.107 1.523 5.827L.057 23.854a.5.5 0 0 0 .608.61l6.174-1.618A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.52-5.168-1.424l-.369-.22-3.825 1.003 1.018-3.71-.242-.384A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -1119,11 +1433,7 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
         </a>
         <a href="tel:+97338898886" class="btn btn-outline-white">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.02 4a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span data-i18n="cta-call">Call 38898886</span>
-        </a>
-        <a href="https://instagram.com/excellent.car.wash" class="btn btn-outline-white" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          <span data-i18n="cta-ig">Instagram</span>
+          <span data-i18n="cta-call">+973 38898886</span>
         </a>
       </div>
     </div>
@@ -1133,189 +1443,221 @@ footer{background:#0C0C0C;border-top:3px solid #E31837;padding:40px 24px 28px}
 <!-- ═══ FOOTER ══════════════════════════════════════════════ -->
 <footer>
   <div class="foot-row">
-    <div>
-      <img src="brand_assets/BF45A1B9-1DA0-491B-AACA-D6143DC995C9.PNG" alt="Excellent Car Wash" style="height:38px;width:auto">
-      <p class="foot-tag" data-i18n="foot-tagline">We drive to you.</p>
+    <div class="foot-brand">
+      <img src="brand_assets/logo.png" alt="Excellent Car Wash logo">
+      <p class="foot-tag" data-i18n="foot-tag">Mobile car wash &amp; full detailing across Bahrain. Founded 2024. Steam-powered. Trained crew. We come to you.</p>
     </div>
-    <nav class="foot-links" aria-label="Footer links">
-      <a href="#services" data-i18n="nav-services">Services</a>
-      <a href="#results" data-i18n="nav-results">Results</a>
-      <a href="#loyalty" data-i18n="nav-loyalty">Loyalty</a>
-      <a href="https://instagram.com/excellent.car.wash" target="_blank" rel="noopener">Instagram</a>
-      <a href="tel:+97338898886">+973 38898886</a>
-    </nav>
-    <p class="foot-copy" data-i18n="foot-copy">© 2024 Excellent Car Wash. Bahrain.</p>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="foot-col-t" data-i18n="foot-c1">Packages</span>
+        <a href="#packages" data-i18n="silver-name">Silver</a>
+        <a href="#packages" data-i18n="steam-name">Steam Wash</a>
+        <a href="#packages" data-i18n="golden-name">Golden</a>
+        <a href="#packages" data-i18n="vippol-name">VIP Polish</a>
+        <a href="#packages" data-i18n="vip-name">Super VIP</a>
+      </div>
+      <div class="foot-col">
+        <span class="foot-col-t" data-i18n="foot-c2">Company</span>
+        <a href="#why" data-i18n="foot-why">Why Us</a>
+        <a href="#results" data-i18n="foot-results">Results</a>
+        <a href="#reviews" data-i18n="foot-reviews">Reviews</a>
+        <a href="#loyalty" data-i18n="foot-loy">Loyalty</a>
+      </div>
+      <div class="foot-col">
+        <span class="foot-col-t" data-i18n="foot-c3">Contact</span>
+        <a href="https://wa.me/97338898886" target="_blank" rel="noopener">+973 38898886</a>
+        <a href="https://instagram.com/excellent.car.wash" target="_blank" rel="noopener">@excellent.car.wash</a>
+        <a href="https://tiktok.com/@excellent.car.wash" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span data-i18n="foot-copy">© 2026 Excellent Car Wash · Bahrain · Founded 2024</span>
+    <span data-i18n="foot-hours">Daily · 8 AM – 10 PM</span>
   </div>
 </footer>
 
-<!-- ═══ FLOATING FAB ═════════════════════════════════════════ -->
+<!-- ═══ FLOATING FAB ════════════════════════════════════════ -->
 <div class="fab-group">
   <a id="fabWa" href="https://wa.me/97338898886?text=Hello%2C+I+want+to+book+a+wash" class="fab-wa-pill" target="_blank" rel="noopener" aria-label="Book on WhatsApp">
-    <div class="fab-wa-icon">
+    <span class="fab-wa-icon">
       <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.554 4.107 1.523 5.827L.057 23.854a.5.5 0 0 0 .608.61l6.174-1.618A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.52-5.168-1.424l-.369-.22-3.825 1.003 1.018-3.71-.242-.384A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-    </div>
-    <div class="fab-wa-text">
-      <span class="fab-wa-label" data-i18n="hero-wa">Book on WhatsApp</span>
-      <span class="fab-wa-sub">+973 38898886</span>
-    </div>
+    </span>
+    <span class="fab-wa-text">
+      <span class="fab-wa-label" data-i18n="fab-l">Book Now</span>
+      <span class="fab-wa-sub" data-i18n="fab-s">via WhatsApp</span>
+    </span>
   </a>
 </div>
 
-<!-- ═══ SCRIPTS ═══════════════════════════════════════════════ -->
 <script>
-const STRINGS = {
-  en: {
-    'nav-brand-name':'Excellent Car Wash',
-    'nav-services':'Services','nav-results':'Results','nav-loyalty':'Loyalty','nav-contact':'Contact','nav-book':'Book Now',
-    'mnav-services':'Services','mnav-results':'Results','mnav-loyalty':'Loyalty','mnav-contact':'Contact',
-    'hero-eyebrow':'Mobile Car Wash · Bahrain',
-    'hero-h1-top':'THE WASH','hero-h1-bot':'COMES TO YOU',
-    'hero-lede':'We drive our fully-equipped van to your home, office, or anywhere in Bahrain. Premium results, zero hassle.',
-    'hero-wa':'Book on WhatsApp','hero-call':'Call Now',
-    'stat-1-n':'8,000+','stat-1-l':'Followers','stat-2-n':'126','stat-2-l':'Posts','stat-3-n':'2024','stat-3-l':'Founded','stat-4-n':'100%','stat-4-l':'Mobile',
-    'why-eyebrow':'Why Excellent','why-title':'THE DIFFERENCE',
-    'why-1-t':'We Come to You','why-1-d':'Home, office, or compound — our van arrives at your location. No driving, no waiting.',
-    'why-2-t':'Steam Technology','why-2-d':'Professional steam equipment removes dirt, bacteria, and grime without excess water waste.',
-    'why-3-t':'Trained Team','why-3-d':'Every detail handled by trained professionals using premium products only.',
-    'svc-eyebrow':'Our Packages','svc-title':'CHOOSE YOUR DETAIL','svc-lede':'Six packages. One mission: leave your car spotless.',
-    'silver-name':'Silver','silver-sub':'Foam Washing',
-    'silver-f1':'Foam car wash','silver-f2':'Interior vacuuming & cleaning','silver-f3':'Tire & wheel cleaning and polish','silver-f4':'Waxing','silver-f5':'Car deodorizing',
-    'golden-name':'Golden','golden-sub':'Quick Hand Polishing',
-    'golden-f1':'Interior vacuuming & cleaning','golden-f2':'Foam wash','golden-f3':'Hand polishing & waxing','golden-f4':'Tire & wheel cleaning and polish','golden-f5':'Waxing','golden-f6':'Car deodorizing',
-    'vip-name':'Super VIP','vip-sub':'Comprehensive Detailing',
-    'vip-f1':'Exterior wash with foam or steam','vip-f2':'Interior cleaning with specialized products & stain removal','vip-f3':'Plastic trim polishing','vip-f4':'Heavy scratch removal polishing','vip-f5':'Medium polishing','vip-f6':'Fine polishing','vip-f7':'Waxing','vip-f8':'Tire polishing','vip-f9':'Car deodorizing','vip-f10':'AC vent & steam sterilization',
-    'svc-sedan':'Sedan','svc-suv':'SUV / Jeep','btn-book':'Book This Package',
-    'steam-name':'Steam Wash','steam-sub':'Steam Washing Package',
-    'steam-f1':'Exterior car wash with wet steam','steam-f2':'Interior dry steam cleaning','steam-f3':'AC vent sterilization with steam','steam-f4':'Spray waxing','steam-f5':'Car perfume','steam-f6':'Tire & wheel cleaning and polish','steam-addon':'Add-on: Engine steam cleaning +BD 5',
-    'machine-vip-name':'Machine VIP','machine-vip-sub':'Machine Exterior Polishing',
-    'machine-vip-f1':'Foam car wash','machine-vip-f2':'Interior vacuuming & cleaning','machine-vip-f3':'Gentle machine polishing of exterior','machine-vip-f4':'Plastic trim polishing','machine-vip-f5':'Waxing','machine-vip-f6':'Car deodorizing','machine-vip-f7':'Tire polishing',
-    'glow-name':'Glow','glow-sub':'Comprehensive Polish Package',
-    'glow-f1':'Exterior wash with foam or steam','glow-f2':'Coarse polish & scratch removal','glow-f3':'Fine polishing','glow-f4':'Spray waxing','glow-f5':'Headlight polishing','glow-f6':'Glass cleaning with special materials','glow-f7':'Tire & wheel cleaning and polish','glow-f8':'Dashboard vacuuming & cleaning','glow-f9':'Car fragrance','glow-addon':'Add-on: Engine cleaning +BD 5',
-    'monthly-eyebrow':'Save More','monthly-title':'MONTHLY PACKAGES','monthly-lede':'Subscribe monthly and save. Choose your visit count — we handle the rest.',
-    'monthly-sedan-label':'Sedan','monthly-jeep-label':'SUV / Jeep',
-    'monthly-v4':'4 Visits','monthly-v6':'6 Visits','monthly-v8':'8 Visits','monthly-v12':'12 Visits',
-    'monthly-addons-title':'Optional Add-ons','monthly-addon-machine':'Machine polish upgrade','monthly-addon-hand':'Hand wax upgrade',
-    'monthly-cta':'Subscribe Monthly',
-    'testi-eyebrow':'Real Customers','testi-title':'WHAT THEY SAY','testi-sub':'Real customer messages — Bahrain',
-    'ext-eyebrow':'Also Available','ext-title':'BEYOND CARS',
-    'ext-bike-t':'Bike Wash','ext-bike-d':'Full wash and detail for motorcycles and bikes.',
-    'ext-boat-t':'Boat Wash','ext-boat-d':'Marine detailing and cleaning service.',
-    'ext-deep-t':'Deep Wash','ext-deep-d':'Intensive interior deep clean and conditioning.',
-    'ext-cta':'Enquire on WhatsApp',
-    'res-eyebrow':'The Proof','res-title':'BEFORE & AFTER','res-lede':'Engine bays, paint correction, interior restoration — we transform every vehicle we touch.',
-    'how-eyebrow':"It's Simple",'how-title':'HOW IT WORKS',
-    'how-1-t':'WhatsApp Us','how-1-d':'Send us your location, vehicle type, and preferred package.',
-    'how-2-t':'We Come to You','how-2-d':'Our van arrives at your location, equipped and ready.',
-    'how-3-t':'Enjoy the Result','how-3-d':'Drive away spotless. Zero effort on your end.',
-    'loy-eyebrow':'Loyalty Program','loy-title':'5 WASHES, 6TH FREE','loy-lede':'Collect a stamp with every paid wash. Your 6th is on us.',
-    'loy-step':'Wash','loy-free':'FREE','loy-cta':'Ask for Your Card','loy-sub':'Physical loyalty card — pick it up when you book your first wash.',
-    'cta-eyebrow':'Ready?','cta-title':'BOOK YOUR WASH TODAY','cta-lede':'WhatsApp us or call directly. We cover all of Bahrain.',
-    'cta-wa':'WhatsApp Booking','cta-call':'Call 38898886','cta-ig':'Instagram',
-    'foot-tagline':'We drive to you.','foot-copy':'© 2024 Excellent Car Wash. Bahrain.',
-  },
+/* ──────────────────────────────────────────────────────────
+   I18N
+   ────────────────────────────────────────────────────────── */
+const I18N = {
   ar: {
-    'nav-brand-name':'إكسلنت كار ووش',
-    'nav-services':'الخدمات','nav-results':'النتائج','nav-loyalty':'برنامج الوفاء','nav-contact':'تواصل','nav-book':'احجز الآن',
-    'mnav-services':'الخدمات','mnav-results':'النتائج','mnav-loyalty':'برنامج الوفاء','mnav-contact':'تواصل',
+    'nav-brand-name':'إكسيلنت كار واش','nav-packages':'الباقات','nav-plans':'الشهرية','nav-results':'النتائج','nav-reviews':'الآراء','nav-loyalty':'الولاء','nav-contact':'تواصل','nav-book':'احجز الآن',
+    'mnav-packages':'الباقات','mnav-plans':'الباقات الشهرية','mnav-results':'النتائج','mnav-reviews':'آراء العملاء','mnav-loyalty':'بطاقة الولاء','mnav-contact':'تواصل معنا',
     'hero-eyebrow':'غسيل سيارات متنقل · البحرين',
-    'hero-h1-top':'الغسيل','hero-h1-bot':'يجي لك',
-    'hero-lede':'نوصل سيارتنا المجهزة لبيتك، دوامك، أو أي مكان في البحرين. نتائج ممتازة بدون تعب.',
-    'hero-wa':'احجز واتساب','hero-call':'اتصل الآن',
-    'stat-1-n':'+٨٠٠٠','stat-1-l':'متابع','stat-2-n':'١٢٦','stat-2-l':'منشور','stat-3-n':'٢٠٢٤','stat-3-l':'تأسيس','stat-4-n':'١٠٠٪','stat-4-l':'متنقل',
-    'why-eyebrow':'لماذا إكسلنت','why-title':'الفرق',
-    'why-1-t':'نجي لك','why-1-d':'بيت، دوام، أو مجمع — سيارتنا توصل لموقعك. بدون قيادة، بدون انتظار.',
-    'why-2-t':'تقنية البخار','why-2-d':'معدات بخار احترافية تزيل الأوساخ والبكتيريا بدون هدر ماء.',
-    'why-3-t':'فريق متخصص','why-3-d':'كل تفصيلة بيد محترفين مدربين باستخدام منتجات ممتازة فقط.',
-    'svc-eyebrow':'باقاتنا','svc-title':'اختر باقتك','svc-lede':'ست باقات. هدف واحد: سيارتك تطلع نظيفة.',
-    'silver-name':'الفضي','silver-sub':'غسيل بالفوم',
-    'silver-f1':'غسيل بالفوم','silver-f2':'شفط وتنظيف المقصورة الداخلية','silver-f3':'تنظيف وتلميع الإطارات والجنوط','silver-f4':'وكسنج','silver-f5':'تعطير السيارة',
+    'hero-h1-top':'الغسيل','hero-h1-bot':'يصل إليك',
+    'hero-lede':'تأتيك سيارتنا المجهزة بالكامل إلى منزلك أو مكتبك أو أي مكان في البحرين. تنظيف بالبخار، تلميع يدوي، ودقّة كاملة في الموقع.',
+    'hero-wa':'احجز عبر واتساب','hero-call':'٣٨٨٩٨٨٨٦','hero-tag':'سيارتنا · هيونداي ستاريا',
+    'hero-trust1-t':'كل البحرين','hero-trust1-d':'منطقة الخدمة',
+    'hero-trust2-t':'تنظيف بالبخار','hero-trust2-d':'صديق للبيئة',
+    'hero-trust3-t':'تقييم ٥ نجوم','hero-trust3-d':'٨٬٠٠٠+ متابع',
+    'stat-1-n':'+٨٬٠٠٠','stat-1-l':'متابع','stat-2-n':'٧','stat-2-l':'باقات','stat-3-n':'٧ د.ب','stat-3-l':'من / غسلة','stat-4-n':'١٠٠٪','stat-4-l':'متنقل',
+    'why-eyebrow':'لماذا إكسيلنت','why-title':'الفرق واضح','why-lede':'معظم خدمات الغسيل تتطلب أن تذهب إليها. نحن نأتي إليك — مجهزون بالكامل ومدربون لتقديم لمعان الصالة على باب منزلك.',
+    'why-1-t':'نأتي إليك','why-1-d':'منزل، مكتب، مجمع — أي مكان في البحرين. سيارتنا تصل بالماء والطاقة والأدوات.','why-1-n':'٠١',
+    'why-2-t':'تقنية البخار','why-2-d':'معدات بخار احترافية ترفع الأوساخ والبكتيريا من الداخل وفتحات المكيف — دون إغراق سيارتك.','why-2-n':'٠٢',
+    'why-3-t':'متخصصون مدربون','why-3-d':'كل غسلة وتلميع وإزالة خدش تتم على يد فني مدرب يستخدم منتجات بريميوم فقط.','why-3-n':'٠٣',
+    'pkg-eyebrow':'باقاتنا','pkg-title':'اختر اللمسة المناسبة',
+    'pkg-lede':'سبع باقات، من غسيل رغوة سريع إلى تلميع متعدد المراحل. كل الأسعار ثابتة — سيدان مقابل جيب. لا رسوم مفاجئة.',
+    'svc-sedan':'سيدان','svc-suv':'جيب / SUV','btn-book':'احجز هذه الباقة',
+    'badge-popular':'الأكثر طلباً','badge-eco':'صديق للبيئة','badge-interior':'تركيز على الداخل','badge-flagship':'الأرقى',
+
+    'silver-name':'سيلفر','silver-sub':'الغسيل بالرغوة',
+    'silver-f1':'غسيل خارجي بالرغوة','silver-f2':'كنس وتنظيف داخلي','silver-f3':'تنظيف وتلميع الإطارات','silver-f4':'تشميع رش','silver-f5':'معطر السيارة',
+
+    'steam-name':'بخار','steam-sub':'بخار رطب وجاف',
+    'steam-f1':'غسيل خارجي بالبخار الرطب','steam-f2':'تنظيف الديكور الداخلي بالبخار الجاف','steam-f3':'تعقيم وتنظيف فتحات المكيف','steam-f4':'تنظيف وتلميع الإطارات','steam-f5':'تشميع رش ومعطر',
+    'steam-addon':'+ تنظيف <strong>محرك السيارة بالبخار</strong> متاح · +٥ د.ب',
+
     'golden-name':'الذهبي','golden-sub':'تلميع يدوي سريع',
-    'golden-f1':'شفط وتنظيف المقصورة الداخلية','golden-f2':'غسيل بالفوم','golden-f3':'تلميع يدوي ووكسنج','golden-f4':'تنظيف وتلميع الإطارات والجنوط','golden-f5':'وكسنج','golden-f6':'تعطير السيارة',
-    'vip-name':'سوبر في آي بي','vip-sub':'تفصيل شامل',
-    'vip-f1':'غسيل خارجي بالفوم أو البخار','vip-f2':'تنظيف داخلي بمنتجات متخصصة وإزالة البقع','vip-f3':'تلميع البلاستيك','vip-f4':'إزالة الخدوش الكبيرة','vip-f5':'تلميع متوسط','vip-f6':'تلميع ناعم','vip-f7':'وكسنج','vip-f8':'تلميع الإطارات','vip-f9':'تعطير السيارة','vip-f10':'تعقيم فتحات التكييف بالبخار',
-    'svc-sedan':'سيدان','svc-suv':'جيب / SUV','btn-book':'احجز الباقة',
-    'steam-name':'غسيل بالبخار','steam-sub':'باقة الغسيل بالبخار',
-    'steam-f1':'غسيل خارجي بالبخار الرطب','steam-f2':'تنظيف داخلي بالبخار الجاف','steam-f3':'تعقيم فتحات التكييف بالبخار','steam-f4':'وكسنج بالرش','steam-f5':'تعطير السيارة','steam-f6':'تنظيف وتلميع الإطارات والجنوط','steam-addon':'إضافة: تنظيف المحرك بالبخار +٥ دينار',
-    'machine-vip-name':'تلميع VIP','machine-vip-sub':'تلميع خارجي بالمكينة',
-    'machine-vip-f1':'غسيل بالفوم','machine-vip-f2':'شفط وتنظيف المقصورة الداخلية','machine-vip-f3':'تلميع ناعم بالمكينة للجسم الخارجي','machine-vip-f4':'تلميع البلاستيك','machine-vip-f5':'وكسنج','machine-vip-f6':'تعطير السيارة','machine-vip-f7':'تلميع الإطارات',
-    'glow-name':'جلو','glow-sub':'باقة تلميع شاملة',
-    'glow-f1':'غسيل خارجي بالفوم أو البخار','glow-f2':'تلميع خشن وإزالة الخدوش','glow-f3':'تلميع ناعم','glow-f4':'وكسنج بالرش','glow-f5':'تلميع المصابيح','glow-f6':'تنظيف الزجاج بمواد متخصصة','glow-f7':'تنظيف وتلميع الإطارات والجنوط','glow-f8':'شفط وتنظيف لوحة القيادة','glow-f9':'عطر السيارة','glow-addon':'إضافة: تنظيف المحرك +٥ دينار',
-    'monthly-eyebrow':'وفر أكثر','monthly-title':'الباقات الشهرية','monthly-lede':'اشترك شهرياً ووفر. اختر عدد الزيارات — نحن نتولى الباقي.',
-    'monthly-sedan-label':'سيدان','monthly-jeep-label':'جيب / SUV',
-    'monthly-v4':'٤ زيارات','monthly-v6':'٦ زيارات','monthly-v8':'٨ زيارات','monthly-v12':'١٢ زيارة',
-    'monthly-addons-title':'خدمات إضافية اختيارية','monthly-addon-machine':'ترقية تلميع بالمكينة','monthly-addon-hand':'ترقية تلميع يدوي بالواكس',
-    'monthly-cta':'اشترك شهرياً',
-    'testi-eyebrow':'عملاء حقيقيون','testi-title':'ماذا يقولون','testi-sub':'رسائل حقيقية من عملاء في البحرين',
-    'ext-eyebrow':'خدمات أخرى','ext-title':'أكثر من سيارات',
-    'ext-bike-t':'غسيل دراجات','ext-bike-d':'غسيل وتفصيل كامل للدراجات النارية والهوائية.',
-    'ext-boat-t':'غسيل قوارب','ext-boat-d':'خدمة تنظيف وتفصيل بحري.',
-    'ext-deep-t':'غسيل عميق','ext-deep-d':'تنظيف داخلي مكثف وعناية بالمقصورة.',
-    'ext-cta':'استفسر على واتساب',
-    'res-eyebrow':'النتائج تتكلم','res-title':'قبل وبعد','res-lede':'غرفة المحرك، تصحيح الطلاء، إعادة تأهيل المقصورة — نحول كل سيارة نمسها.',
-    'how-eyebrow':'بسيط وسهل','how-title':'كيف تشتغل الخدمة',
-    'how-1-t':'واتساپنا','how-1-d':'ارسلنا موقعك، نوع السيارة، والباقة اللي تبيها.',
-    'how-2-t':'نجي لك','how-2-d':'سيارتنا توصل لموقعك، مجهزة وجاهزة.',
-    'how-3-t':'استمتع بالنتيجة','how-3-d':'سيارتك تطلع كالجديدة. بدون أي تعب منك.',
-    'loy-eyebrow':'برنامج الوفاء','loy-title':'٥ غسلات والسادسة مجاناً','loy-lede':'اجمع ختم مع كل غسلة مدفوعة. الغسلة السادسة علينا.',
-    'loy-step':'غسلة','loy-free':'مجاناً','loy-cta':'استلم كارتك','loy-sub':'كارت وفاء فيزيائي — اطلبه عند أول حجز.',
-    'cta-eyebrow':'مستعد؟','cta-title':'احجز غسلتك اليوم','cta-lede':'راسلنا على واتساب أو اتصل مباشرة. نغطي كل البحرين.',
-    'cta-wa':'حجز عبر واتساب','cta-call':'اتصل ٣٨٨٩٨٨٨٦','cta-ig':'إنستغرام',
-    'foot-tagline':'نجي لك.','foot-copy':'© ٢٠٢٤ إكسلنت كار ووش. البحرين.',
+    'golden-f1':'كل ما في السيلفر','golden-f2':'تلميع وتشميع يدوي','golden-f3':'شمع تشطيب بريميوم','golden-f4':'تنظيف وتلميع الإطارات','golden-f5':'معطر السيارة',
+
+    'vippol-name':'VIP تلميع','vippol-sub':'تلميع خارجي بالمكينة',
+    'vippol-f1':'غسيل خارجي بالرغوة','vippol-f2':'كنس وتنظيف داخلي','vippol-f3':'تلميع ناعم للسيارة بالمكينة','vippol-f4':'تلميع القطع البلاستيكية','vippol-f5':'تشميع وتلميع الإطارات','vippol-f6':'معطر السيارة',
+
+    'deep-name':'تنظيف عميق','deep-sub':'مقاعد وتفاصيل داخلية',
+    'deep-f1':'تنظيف عميق للمقاعد وإزالة البقع','deep-f2':'شامبو الفرش الداخلي','deep-f3':'ترطيب الجلد','deep-f4':'تنظيف السقف والقطع البلاستيكية','deep-f5':'تعقيم فتحات المكيف ومعطر',
+    'deep-addon':'✦ يشمل غسيل خارجي <strong>مجاني</strong>',
+
+    'glow-name':'GLOW','glow-sub':'تصحيح الطلاء وتلميع',
+    'glow-f1':'غسيل خارجي بالرغوة أو البخار','glow-f2':'تلميع خشن مع إزالة الخدوش','glow-f3':'تلميع ناعم وتشميع رش','glow-f4':'تلميع الإنارة','glow-f5':'تنظيف الزجاج بمواد خاصة','glow-f6':'كنس وتنظيف داشبورد',
+    'glow-addon':'+ تنظيف <strong>المحرك</strong> بمواد خاصة · +٥ د.ب',
+
+    'vip-name':'سوبر VIP','vip-sub':'تلميع شامل',
+    'vip-f1':'غسيل خارجي بالرغوة أو البخار','vip-f2':'تنظيف داخلي بمواد خاصة وإزالة بقع','vip-f3':'تلميع القطع البلاستيكية','vip-f4':'تلميع ٣ مراحل: خشن / متوسط / ناعم','vip-f5':'تشميع وتلميع الإطارات','vip-f6':'تعقيم فتحات المكيف بالبخار','vip-f7':'معطر السيارة',
+
+    'plans-eyebrow':'اشتراكات شهرية','plans-title':'غسيل منتظم، سعر أفضل',
+    'plans-lede':'للسيارات التي تحتاج لمظهر مميز كل أسبوع. ادفع مقدماً لـ ٤ / ٦ / ٨ / ١٢ زيارة في الشهر ووفّر حتى <strong>٤٠٪</strong> لكل غسلة. ألغِ في أي وقت.',
+    'plan-small-cat':'سيدان / صغير','plan-small-name':'باقة شهرية',
+    'plan-large-cat':'جيب / SUV / كبير','plan-large-name':'باقة شهرية',
+    'plan-visits':'زيارات / شهر','plan-cta':'اشترك الآن',
+    'plan-small-note':'٦ د.ب / غسلة عند ٤ زيارات · ٣.٥ د.ب / غسلة عند ١٢',
+    'plan-large-note':'٧.٥ د.ب / غسلة عند ٤ زيارات · ٤.١٦ د.ب / غسلة عند ١٢',
+    'addon-strip-label':'إضافات الباقات:','addon-machine':'تلميع بالمكينة','addon-hand':'تلميع وتشميع يدوي','addon-engine':'تنظيف المحرك بالبخار',
+
+    'res-eyebrow':'الدليل','res-title':'قبل وبعد','res-lede':'سيارات عملاء حقيقيين. نتائج حقيقية. غرف محركات، أضواء باهتة، مقاعد متسخة — كل عمل موثق.',
+    'ba1':'محرك BMW · تنظيف بالبخار','ba2':'تجديد الأنوار','ba3':'تنظيف عميق للمقاعد','ba4':'إزالة البقع · المقعد الخلفي',
+
+    'rev-eyebrow':'ماذا يقول العملاء','rev-title':'تقييمات ٥ نجوم','rev-lede':'رسائل واتساب حقيقية من عملاء في المنامة والرفاع وسار والمحرق ومدينة حمد.',
+    'rev1':'السيارة رجعت نظيفة تماماً ورائحتها جميلة. الطاقم مؤدب وفي الوقت. أنا عميل دائم — دائماً اختار إكسيلنت كار واش. 👌',
+    'rev1-n':'أحمد م.','rev-via':'واتساب · ٧:٠٤ م',
+    'rev2':'خدمة ممتازة. السيارة تبدو كأنها جديدة. شرحوا كل خطوة وكانوا صادقين بما يمكن إزالته. أنصح بهم بقوة.',
+    'rev2-n':'سارة هـ.','rev-via2':'واتساب · ٦:١٧ م',
+    'rev3':'العمل نظيف وبروفيشنال. الداخل ممتاز والرائحة رائعة. أكيد بحجز مرة ثانية — ما في مكان ثاني نتعامل معه.',
+    'rev3-n':'خالد ر.','rev-via3':'واتساب · ٩:٢٥ م',
+
+    'how-eyebrow':'بسيط','how-title':'كيف نشتغل',
+    'how-1-t':'تواصل واتساب','how-1-d':'أرسل موقعك ونوع السيارة والباقة المطلوبة. نأكد الحجز في دقائق.',
+    'how-2-t':'نوصل لك','how-2-d':'هيونداي ستاريا مجهزة بالكامل — ماء، طاقة، بخار، رغوة، أدوات تلميع.',
+    'how-3-t':'انطلق نظيفاً','how-3-d':'لمسة الصالة على باب منزلك. ادفع كاش، بطاقة، أو بنفت باي على الفور.',
+
+    'loy-eyebrow':'بطاقة الولاء','loy-title':'٥ غسلات،<br>السادسة <span style="color:var(--red)">مجاناً</span>',
+    'loy-lede':'احصل على ختم مع كل غسلة مدفوعة. الغسلة السادسة على حسابنا. بطاقة فعلية — اطلبها عند الحجز.',
+    'loy-cta':'استلم بطاقتك',
+    'loy-sub':'البطاقة سارية لكل الباقات · غسلة مجانية بقيمة حتى ١٥ د.ب','loy-step':'غسلة','loy-free':'مجاناً',
+
+    'cta-eyebrow':'جاهزون متى أنت','cta-title':'احجز غسلتك اليوم',
+    'cta-lede':'واتساب أو اتصل. نغطي كل البحرين ومعظم المواعيد تتأكد في دقائق.',
+    'cta-wa':'احجز عبر واتساب','cta-call':'٣٨٨٩٨٨٨٦+',
+
+    'foot-tag':'غسيل سيارات وتلميع متنقل في البحرين. تأسست ٢٠٢٤. تقنية بخار. طاقم مدرب. نأتي إليك.',
+    'foot-c1':'الباقات','foot-c2':'الشركة','foot-c3':'تواصل',
+    'foot-why':'لماذا نحن','foot-results':'النتائج','foot-reviews':'الآراء','foot-loy':'الولاء',
+    'foot-copy':'© ٢٠٢٦ إكسيلنت كار واش · البحرين · تأسست ٢٠٢٤','foot-hours':'يومياً · ٨ ص – ١٠ م',
+    'fab-l':'احجز','fab-s':'عبر واتساب',
   }
 };
 
-const WA_BASE = 'https://wa.me/97338898886?text=';
-const WA_MSGS = {
-  en: { general:'Hello%2C+I+want+to+book+a+wash', silver:'Silver+package+booking', golden:'Golden+package+booking', vip:'Super+VIP+package+booking', steam:'Steam+Washing+package+booking', machineVip:'Machine+VIP+polishing+booking', glow:'Glow+package+booking', monthly:'Monthly+subscription+enquiry', loyalty:'I+want+a+loyalty+card', bike:'Bike+wash+enquiry', boat:'Boat+wash+enquiry', deep:'Deep+wash+enquiry' },
-  ar: { general:'%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%AD%D8%AC%D8%B2+%D8%BA%D8%B3%D9%8A%D9%84', silver:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D9%81%D8%B6%D9%8A', golden:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A', vip:'%D8%A8%D8%A7%D9%82%D8%A9+%D8%B3%D9%88%D8%A8%D8%B1+%D9%81%D9%8A+%D8%A2%D9%8A+%D8%A8%D9%8A', steam:'%D8%AD%D8%AC%D8%B2+%D8%A8%D8%A7%D9%82%D8%A9+%D8%A7%D9%84%D8%BA%D8%B3%D9%8A%D9%84+%D8%A8%D8%A7%D9%84%D8%A8%D8%AE%D8%A7%D8%B1', machineVip:'%D8%AD%D8%AC%D8%B2+%D8%AA%D9%84%D9%85%D9%8A%D8%B9+VIP', glow:'%D8%AD%D8%AC%D8%B2+%D8%A8%D8%A7%D9%82%D8%A9+%D8%AC%D9%84%D9%88', monthly:'%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1+%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83+%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A', loyalty:'%D8%A3%D8%B1%D9%8A%D8%AF+%D8%A8%D8%B7%D8%A7%D9%82%D8%A9+%D9%88%D9%81%D8%A7%D8%A1', bike:'%D8%BA%D8%B3%D9%8A%D9%84+%D8%AF%D8%B1%D8%A7%D8%AC%D8%A9', boat:'%D8%BA%D8%B3%D9%8A%D9%84+%D9%82%D8%A7%D8%B1%D8%A8', deep:'%D8%BA%D8%B3%D9%8A%D9%84+%D8%B9%D9%85%D9%8A%D9%82' }
-};
-
-function setLang(lang) {
-  const isAr = lang === 'ar';
-  document.documentElement.lang = lang;
-  document.documentElement.dir  = isAr ? 'rtl' : 'ltr';
-  document.body.classList.toggle('ar-mode', isAr);
-
-  const S = STRINGS[lang] || STRINGS.en;
+function setLang(lang){
+  const html = document.documentElement;
+  if(lang === 'ar'){
+    html.lang = 'ar'; html.dir = 'rtl';
+    document.body.classList.add('ar-mode');
+    document.getElementById('langToggle').textContent = 'English';
+  } else {
+    html.lang = 'en'; html.dir = 'ltr';
+    document.body.classList.remove('ar-mode');
+    document.getElementById('langToggle').textContent = 'العربية';
+  }
+  // Apply translations
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const v = S[el.dataset.i18n];
-    if (v !== undefined) el.textContent = v;
+    const key = el.getAttribute('data-i18n');
+    if(lang === 'ar' && I18N.ar[key]){
+      el.dataset.enText = el.dataset.enText || el.innerHTML;
+      el.innerHTML = I18N.ar[key];
+    } else if(lang === 'en' && el.dataset.enText){
+      el.innerHTML = el.dataset.enText;
+    }
   });
-
-  const btn = document.getElementById('langToggle');
-  if (btn) btn.textContent = isAr ? 'English' : 'العربية';
-
-  const m = WA_MSGS[lang] || WA_MSGS.en;
-  const map = { heroWa:m.general, navCta:m.general, mobileWa:m.general, bookWa:m.general, fabWa:m.general, loyWa:m.loyalty, silverCta:m.silver, goldenCta:m.golden, vipCta:m.vip, steamCta:m.steam, machineVipCta:m.machineVip, glowCta:m.glow, monthlyCta:m.monthly, bikeWa:m.bike, boatWa:m.boat, deepWa:m.deep };
-
-  Object.entries(map).forEach(([id,msg]) => { const el=document.getElementById(id); if(el) el.href = WA_BASE+msg; });
-
-  try { localStorage.setItem('ecw-lang', lang); } catch(_) {}
+  try{ localStorage.setItem('ecw-lang', lang); }catch(_){}
 }
 
-/* Burger */
+/* ──────────────────────────────────────────────────────────
+   MOBILE NAV
+   ────────────────────────────────────────────────────────── */
 (function(){
-  const btn=document.getElementById('burgerBtn'), nav=document.getElementById('mobileNav');
-  function open(){ btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); nav.classList.add('open'); nav.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-  function close(){ btn.classList.remove('open'); btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); nav.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
-  btn.addEventListener('click', ()=> btn.classList.contains('open') ? close() : open());
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
-  document.addEventListener('click', e=>{ if(nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) close(); });
+  const btn = document.getElementById('burgerBtn');
+  const nav = document.getElementById('mobileNav');
+  function open(){
+    btn.classList.add('open'); btn.setAttribute('aria-expanded','true');
+    nav.classList.add('open'); nav.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    btn.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+    nav.classList.remove('open'); nav.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', () => btn.classList.contains('open') ? close() : open());
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 })();
 
-/* Lang toggle */
-document.getElementById('langToggle').addEventListener('click', ()=> setLang(document.documentElement.lang==='ar' ? 'en' : 'ar'));
+/* Language toggle */
+document.getElementById('langToggle').addEventListener('click', () => {
+  setLang(document.documentElement.lang === 'ar' ? 'en' : 'ar');
+});
 
 /* Scroll reveal */
 (function(){
-  const io=new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 
-/* Init lang */
+/* Init lang from storage */
 (function(){
-  let s='en'; try{ s=localStorage.getItem('ecw-lang')||'en'; }catch(_){}
-  if(s==='ar') setLang('ar');
+  let stored = 'en';
+  try{ stored = localStorage.getItem('ecw-lang') || 'en'; }catch(_){}
+  if(stored === 'ar') setLang('ar');
+})();
+
+/* Language-aware image swap */
+function swapLangImages(lang){
+  document.querySelectorAll('img[data-img-en]').forEach(img => {
+    const target = lang === 'ar' ? img.getAttribute('data-img-ar') : img.getAttribute('data-img-en');
+    if(target && img.getAttribute('src') !== target) img.setAttribute('src', target);
+  });
+}
+(function(){
+  const orig = setLang;
+  window.setLang = function(lang){ orig(lang); swapLangImages(lang); };
+  swapLangImages(document.documentElement.lang === 'ar' ? 'ar' : 'en');
 })();
 </script>
 </body>
