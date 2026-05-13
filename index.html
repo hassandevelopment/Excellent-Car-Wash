@@ -204,38 +204,36 @@ button{font:inherit}
   position:relative;
   min-height:100dvh;
   background:var(--ink);
-  display:flex;align-items:center;
+  display:flex;align-items:flex-end;
   overflow:hidden;
   padding-top:64px;
 }
 .hero-bg{
   position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(227,24,55,.18) 0%, transparent 60%),
-    linear-gradient(135deg, #0a0a0a 0%, #0C0C0C 50%, #161616 100%);
+  background-image:url('brand_assets/excellent-hero.png');
+  background-size:cover;
+  background-position:center center;
   z-index:0;
 }
 .hero-bg::before{
   content:'';position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-  background-size:48px 48px;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 50%, #000 30%, transparent 80%);
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.75) 100%);
+  z-index:1;
 }
 .hero-inner{
-  position:relative;z-index:1;
+  position:relative;z-index:2;
   max-width:1280px;margin:0 auto;width:100%;
-  padding:48px 24px;
+  padding:48px 24px 72px;
   display:grid;
   grid-template-columns:1fr;
-  gap:40px;
-  align-items:center;
+  gap:0;
+  align-items:flex-end;
 }
 @media(min-width:900px){
-  .hero-inner{grid-template-columns:1.05fr .95fr;gap:64px;padding:80px 32px}
+  .hero-inner{padding:80px 32px 96px}
 }
-.hero-text{max-width:640px}
+.hero-text{max-width:720px}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
 .hero-eyebrow-bar{width:36px;height:3px;background:var(--red);flex-shrink:0;border-radius:2px}
 .hero-eyebrow-txt{
@@ -1040,10 +1038,6 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
       </div>
     </div>
 
-    <div class="hero-photo-wrap reveal" style="transition-delay:.15s">
-      <img src="brand_assets/excellent-hero.png" alt="Excellent Car Wash — premium mobile detailing Bahrain" style="object-position:center top">
-      <div class="hero-photo-tag" data-i18n="hero-tag">Mobile Fleet · Hyundai Staria</div>
-    </div>
   </div>
 </section>
 
