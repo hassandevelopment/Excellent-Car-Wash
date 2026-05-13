@@ -149,6 +149,20 @@ button{font:inherit}
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 @media(min-width:900px){.burger{display:none}}
 
+/* ── Mobile nav fixes — prevent overflow/zoom-out ────── */
+@media(max-width:767px){
+  /* Hide brand name text — logo alone is enough */
+  .nav-brand-name{display:none}
+  /* Hide nav CTA — hamburger menu has WhatsApp */
+  #navCta{display:none}
+  /* Tighten nav padding */
+  .nav{padding:0 16px}
+}
+@media(max-width:480px){
+  /* Very small screens — compress lang button too */
+  .lang-btn{padding:6px 10px;font-size:12px}
+}
+
 /* Mobile nav */
 .mobile-nav{
   position:fixed;inset:0;z-index:49;
@@ -273,6 +287,9 @@ button{font:inherit}
   text-shadow:0 1px 8px rgba(0,0,0,.9);
 }
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+@media(max-width:480px){
+  .cta-row .btn{flex:1;min-width:0;justify-content:center}
+}
 
 .hero-photo-wrap{
   position:relative;
@@ -315,9 +332,12 @@ button{font:inherit}
 
 .hero-trust{
   margin-top:36px;
-  display:flex;gap:24px;flex-wrap:wrap;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
   padding-top:24px;
   border-top:1px solid rgba(255,255,255,.08);
+}
+@media(max-width:600px){
+  .hero-trust{grid-template-columns:1fr 1fr;gap:12px}
 }
 .hero-trust-item{display:flex;align-items:center;gap:10px}
 .hero-trust-icon{
