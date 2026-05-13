@@ -559,6 +559,7 @@ button{font:inherit}
   font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;
   cursor:pointer;border-radius:6px;
   transition:opacity .15s,transform .12s,background .15s;
+  margin-top:auto;
 }
 .ar-mode .tier-book-btn{font-style:normal;letter-spacing:0}
 .tier-book-btn:active{transform:scale(.98)}
@@ -678,20 +679,16 @@ button{font:inherit}
 @media(min-width:680px){.ba-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){
   .ba-grid{
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:1fr;
+    grid-template-columns:repeat(2,1fr);
   }
-  .ba-frame.wide{grid-column:span 2}
 }
 .ba-frame{
   position:relative;
   border-radius:10px;overflow:hidden;
   border:1px solid rgba(255,255,255,.08);
   background:#0a0a0a;
-  aspect-ratio:1;
 }
-.ba-frame.wide{aspect-ratio:2/1}
-.ba-frame img{width:100%;height:100%;object-fit:cover;display:block;object-position:center}
+.ba-frame img{width:100%;height:auto;object-fit:contain;display:block;}
 .ba-frame::after{
   content:'';position:absolute;inset:0;
   background:linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 30%);
@@ -1277,7 +1274,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
     </div>
 
     <div class="ba-grid">
-      <div class="ba-frame wide reveal">
+      <div class="ba-frame reveal">
         <img src="brand_assets/p21.jpeg" alt="BMW engine bay before and after steam cleaning">
         <span class="ba-caption" data-i18n="ba1">BMW Engine Bay · Steam Restoration</span>
       </div>
@@ -1289,7 +1286,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:48px 24px 3
         <img src="brand_assets/p20.jpeg" alt="Beige interior fabric seats before and after deep clean">
         <span class="ba-caption" data-i18n="ba3">Fabric Seats Deep Clean</span>
       </div>
-      <div class="ba-frame wide reveal" style="transition-delay:.24s">
+      <div class="ba-frame reveal" style="transition-delay:.24s">
         <img src="brand_assets/p18.jpeg" alt="Stained rear seats before and after deep cleaning">
         <span class="ba-caption" data-i18n="ba4">Stain Removal · Rear Bench</span>
       </div>
